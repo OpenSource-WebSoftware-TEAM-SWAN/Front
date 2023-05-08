@@ -1,0 +1,103 @@
+<!doctype html>
+<title>prototype</title>
+<style>
+      body { 
+          display: grid;
+          grid-template-areas: 
+            "nav header header"
+            "nav article article"
+            "nav article2 article2";
+          grid-template-rows: 80px 80px;  
+          grid-template-columns: 15% 1fr 15%;
+          grid-row-gap: 10px;
+          grid-column-gap: 10px;
+          height: 200vh;
+          margin: 0;
+          font-family: 'melona';
+        }  
+      header, footer, article, nav, div {
+        padding: 1.2em;
+        background: lavender;
+        }
+      #pageHeader {
+        grid-area: header;
+        }
+      #mainArticle { 
+        grid-area: article;
+        padding-top: 1em;      
+        }
+      #Article2 { 
+        grid-area: article2;      
+        }
+      #mainNav { 
+        grid-area: nav; 
+        }
+      /* Stack the layout on small devices/viewports. */
+      @media all and (max-width: 575px) {
+        body { 
+          grid-template-areas: 
+            "header"
+            "article"
+            "article2"
+            "nav";
+          grid-template-rows: 80px 1fr 1fr 70px;  
+          grid-template-columns: 1fr;
+      }
+      }
+      @font-face {
+          font-family: 'melona';
+          src: url('BinggraeMelona-Bold.ttf') format('truetype');
+      }
+
+      button.circle {
+        height: 50px;
+        width: 100px;
+        min-width: fit-content;
+        border-radius: 50px;
+        margin-right: 3%;
+      }
+
+      .seed{
+            width: 350px;
+            height: 350px;
+            padding: 40px;
+            box-sizing: border-box;
+            border: 2px solid #D2D2D2;
+            border-radius: 10px;
+            font-family: 'melona';
+            display: inline-block;
+            margin: 5px;
+        }
+</style>
+<body>
+  <div id="pageHeader"><h1 style="text-align: left; margin: auto;">나의 세계일주여행기(대제목)</h1></div>
+  <div id="mainArticle">
+    <button class="circle">소제목1소제목1</button>
+    <button class="circle">소제목2소제목2</button>
+    <button class="circle">소제목3소제목3</button>
+    <button class="circle">소제목4소제목4</button>
+  </div>
+  <div id="Article2">
+    <form action="post" class="seed">
+      <img src="송지운.png" alt="" width="173px" height="251px">
+      <p>송지운입니다.</p>
+    </form>
+    <form action="post" class="seed">
+      <img src="이지형.png" alt="" width="173px" height="251px">
+      <p>이지형입니다.</p>
+    </form>
+    <form action="post" class="seed">
+      <img src="증명사진.jpg" alt="" width="173px" height="251px">
+      <p>남재홍입니다.</p>
+    </form>
+    <form action="post" class="seed">
+      <img src="전종훈.jpg" alt="" width="173px" height="251px"> 
+      <p>전종훈입니다.</p>
+    </form>
+    <form action="post" class="seed">
+      <img src="조민우.png" alt="" width="173px" height="251px">
+      <p>조민우입니다.</p>
+    </form>
+  </div>
+  <div id="mainNav">Nav</div>
+</body>
