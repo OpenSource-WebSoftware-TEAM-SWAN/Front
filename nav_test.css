@@ -30,6 +30,9 @@ a{
 }
 
 /* 메인 네비게이션 */
+
+    
+
 .nav-btn{
     position: fixed;
 }
@@ -37,6 +40,7 @@ a{
     padding: 3px;
 }
 .main-nav {
+>>>>>>> 35b1322003f1b86809e2b693156bb4f86cfe930d
     grid-area: nav;
     height: 100%;
     position: relative;
@@ -44,10 +48,14 @@ a{
     box-sizing: border-box;
     display: none;
 }
+<<<<<<< HEAD
+.main-nav img{
+=======
 .main-nav .swan-logo{
     text-align: center;
 }
 .main-nav img:nth-child(2){
+>>>>>>> 35b1322003f1b86809e2b693156bb4f86cfe930d
     float: left;
 }
 .main-nav .user-info{
