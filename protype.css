@@ -8,7 +8,8 @@ body {
     grid-template-columns: 15% 1fr 15%;
     grid-row-gap: 1.25%;
     grid-column-gap: 1.25%;
-    width: 100%;
+
+>>>>>>> 35b1322003f1b86809e2b693156bb4f86cfe930d
     height: 100%;
     margin: 0;
     font-family: 'melona';
@@ -263,7 +264,11 @@ a.btn-card {
   position: flex;
 }
 
+<<<<<<< HEAD
 .btnWrite {
+=======
+.writebtn {
+>>>>>>> 35b1322003f1b86809e2b693156bb4f86cfe930d
   text-align: center;
   font-size: 50px;
   position: fixed;
@@ -281,18 +286,30 @@ a.btn-card {
   transition-duration: 0.3s;
 }
 
+<<<<<<< HEAD
 .btnWrite:hover {
   background-color: #000C3E;
 }
 
 .btnWrite:active {
+=======
+.writebtn:hover {
+  background-color: #000C3E;
+}
+
+.writebtn:active {
+>>>>>>> 35b1322003f1b86809e2b693156bb4f86cfe930d
   background-color: #F7591D;
   box-shadow: none;
   margin-top: 5px;
   margin-left: 5px;
 }
 
+<<<<<<< HEAD
 .btnWrite:focus {
+=======
+.writebtn:focus {
+>>>>>>> 35b1322003f1b86809e2b693156bb4f86cfe930d
   border: none;
   outline: none;
 }
