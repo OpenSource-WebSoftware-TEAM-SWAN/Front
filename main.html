@@ -17,7 +17,59 @@
     <div class="container-fluid">
 
         <!-- side nav bar Grid -->
+        <div class="nav-btn">
+            <button class="btn btn-primary" style="height:100px">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+            </button>
+        </div>
+        <div class="main-nav">
+
+            <div class="swan-logo">
+                <img src="./images/swanlogo.png" alt="swan logo" class="rounded-circle" height="100px" width="200px">
+            </div>
+            <!-- user brief info -->
+            <div class="user-info">
+                <img src="./images/sameple_image.jpeg" alt="user image" class="rounded-circle" height="100" width="100">
+                <div>
+                    <p>Binwon <br> 일찍 일어나는 새가 일찍 죽어</p>
+                </div>
+            </div>
+
+            <!-- bookmark list -->
+            <div class="bookmark">
+                <p>최근항목</p>
+                <div class="first-toggle content-tog">
+                    <a href="#bok-tog1" data-bs-toggle="collapse" id="bok-tog0">최근 seed</a>
+                </div>
+                <div class="second-toggle content-tog">
+                    <a href="#bok-tog2" class="collapse" data-bs-toggle="collapse" data-bs-parnet="#bok-tog0"
+                        id="bok-tog1">second toggle</a>
+                </div>
+                <div class="third-toggle content-tog">
+                    <a href="#" class="collapse" data-bs-toggle="collapse" data-bs-parnet="#bok-tog1 #bok-tog0"
+                        id="bok-tog2">third toggle</a>
+                </div>
+            </div>
         
+
+            <!-- toggle -->
+            <div class="headline-info">
+                <div class="first-toggle content-tog">
+                    <a href="#tog1" data-bs-toggle="collapse" id="tog0">대제목 선택</a>
+                </div>
+                <div class="second-toggle content-tog">
+                    <a href="#tog2" class="collapse" data-bs-toggle="collapse" data-bs-parnet="#tog0" id="tog1">second
+                        toggle</a>
+                </div>
+                <div class="third-toggle content-tog">
+                    <a href="#" class="collapse" data-bs-toggle="collapse" data-bs-parnet="#tog1 #tog0" id="tog2">third
+                        toggle</a>
+                </div>
+            </div>
+        </div>
+
 
         <!-- Main feature Grid -->
         <div class="headline">
