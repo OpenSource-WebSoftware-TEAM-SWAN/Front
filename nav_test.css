@@ -29,15 +29,21 @@ a{
 }
 
 /* 메인 네비게이션 */
-.main-nav {
+.nav-btn{
+    position: fixed;
     
+}
+.main-nav {
     grid-area: nav;
     height: 100%;
     position: relative;
     background-color: aliceblue;
     box-sizing: border-box;
 }
-.main-nav img{
+.main-nav .swan-logo{
+    text-align: center;
+}
+.main-nav img:nth-child(2){
     float: left;
 }
 .main-nav .user-info{
