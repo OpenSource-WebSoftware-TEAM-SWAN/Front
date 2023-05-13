@@ -4,7 +4,7 @@
 
 
     btnOpenPopup.addEventListener('click', () => {
-    writeSeed.style.display = 'inline-block';// 화면 고정
+    writeSeed.style.display == 'inline-block';// 화면 고정
     body.style.overflow = 'hidden';
     });
 
