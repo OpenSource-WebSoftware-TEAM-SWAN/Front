@@ -4,10 +4,10 @@ body {
       "nav header header"
       "nav article article"
       "nav article2 article2";
-    grid-template-rows: 80px 80px;  
+    grid-template-rows: 10% 10%;  
     grid-template-columns: 15% 1fr 15%;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
+    grid-row-gap: 1.25%;
+    grid-column-gap: 1.25%;
     height: 100%;
     margin: 0;
     font-family: 'melona';
@@ -28,7 +28,8 @@ body {
 #mainArticle { 
   grid-area: article;
   padding-top: 1em;  
-  text-align: center;    
+  text-align: center; 
+  justify-content: space-between;   
   }
 #Article2 { 
   grid-area: article2;
@@ -65,7 +66,7 @@ body {
       "article"
       "article2"
       "nav";
-    grid-template-rows: 80px 1fr 1fr 70px;  
+    grid-template-rows: 10% 1fr 1fr 10%;
     grid-template-columns: 1fr;
 }
 }
@@ -86,25 +87,9 @@ body {
 	}
 }
 
-button.circle {
-  height: 50px;
-  width: 100px;
-  min-width: fit-content;
-  border-radius: 50px;
-  margin-right: 3%;
+.row {
+  justify-content: space-between;
 }
-
-.seed{
-      width: 350px;
-      height: 350px;
-      padding: 40px;
-      box-sizing: border-box;
-      border: 2px solid #D2D2D2;
-      border-radius: 10px;
-      font-family: 'melona';
-      display: inline-block;
-      margin: 5px;
-  }
 
 .btn-hover {
     width: 140px;
@@ -127,7 +112,6 @@ button.circle {
 
 .btn-hover:hover {
     background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -215,10 +199,6 @@ button.circle {
     color: #fff;
     font-size: 12px;
     border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
     transform: translate(-50%,-50%);
 }
 .card-img span h4{
@@ -261,11 +241,7 @@ button.circle {
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
   padding: .84rem 2.14rem;
   font-size: .81rem;
-  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
-  -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  
   margin: 0;
   border: 0;
   -webkit-border-radius: .125rem;
@@ -295,8 +271,8 @@ a.btn-card {
   position: fixed;
   background-color: #C6DEFA;
   color: white;
-  top: 600px;
-  left: 1300px;
+  top: 80%;
+  left: 90%;
   width: 70px;
   height: 70px;
   line-height: 45px;
