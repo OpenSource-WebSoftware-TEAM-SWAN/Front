@@ -1,0 +1,113 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height: 100%;
+    font-family: '../fonts/Binggrae', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+    padding-left: 20px;
+}
+
+/* 전체 레이아웃 */
+.container-fluid{
+    height: 100%;
+    width:100%;
+
+    display: grid;
+    grid:
+        "nav header header header"   0.5fr 
+        "nav header header header" 1fr 
+        "nav header header header" 1fr
+        "nav article article article" 1fr / 0.3fr 0.3fr 1fr 0.3fr;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+/* 메인 네비게이션 */
+.main-nav {
+    
+    grid-area: nav;
+    height: 100%;
+    position: relative;
+    background-color: aliceblue;
+    box-sizing: border-box;
+}
+.main-nav img{
+    float: left;
+}
+.main-nav .user-info{
+    display: flex;
+    align-items:end;
+    background-color: cadetblue;
+    color: white;
+}
+.main-nav .bookmark{
+    position: relative;
+    background-color: aquamarine;
+    padding: 10px;
+}
+.main-nav .headline-info{
+    position: relative;
+    background-color:beige;
+    padding: 10px;
+}
+
+.second-toggle{
+    position: relative;
+    left: 50px;
+}
+.third-toggle{
+    position: relative;
+    left: 100px;
+}
+
+/* 달성률과 캘린더 레아아웃 */
+.headline {
+    height: 100%;
+    grid-area: header;
+    background-color: brown;
+    box-sizing: border-box;
+    display: flex;
+    padding: 20px;
+}
+.headline .recent-item{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.headline .recent-text{
+    background-color: blanchedalmond;
+    width: 49%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.headline .recent-img{
+    background-color:cadetblue;
+    width: 49%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* 모든 이미지 레이아웃 */
+.all-images {
+    display: flex;
+    height: 100%;
+    grid-area: article;
+    background-color: coral;
+    justify-content: space-around;
+    padding: 10px;
+}
+.all-images img{
+    border: 2px solid black;
+    border-radius:1px;
+}

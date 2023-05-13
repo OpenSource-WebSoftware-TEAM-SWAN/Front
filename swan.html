@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="swan.css" rel="stylesheet">
+    <title>Swan</title>
+</head>
+<body class="fade">
+    <div class="container">
+        <div class="header"></div>
+        <div class="swan">
+            <div class="logo-orange"></div>
+            <div class="logo-black"></div>
+            <h2 class="swanlogo">SWAN</h2>
+        </div>
+
+        <div class="login-wrapper">
+            <h3><a href="prototype.html">당신의 작은 한걸음</a></h3>
+            <img src="images/white-icon-swan.png" alt="" width="40px" height="40px">
+            <form id="login-form">
+                <input type="text" name="userID" placeholder="Email" id="LOGIN_ID" autofocus>
+                <input type="password" name="userPW" placeholder="Password" id="LOGIN_PW">
+                <label for="remember-check">
+                    <input type="checkbox" id="remember-check">Remember ID
+                </label>
+                <input type="submit" value="Login" id="LOGIN_BTN" disabled>
+            </form>
+        </div>
+        <div class="footer"></div>
+    </div>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            window.setTimeout(() => {
+            document.body.classList.remove('fade');
+            return false;
+            });
+        });
+        const loginId = document.getElementById('LOGIN_ID');
+        const loginPw = document.getElementById('LOGIN_PW');
+        const loginBtn = document.getElementById('LOGIN_BTN');
+
+        function color() {
+            if((loginId.value.length>0 && loginId.value.indexOf("@")!==-1) 
+                && loginPw.value.length>=4){
+                loginBtn.style.backgroundColor = "#F7591D";
+                loginBtn.disabled = false;
+            }else{
+                loginBtn.style.backgroundColor = "#C0DFFD";
+                loginBtn.disabled = true;
+            }
+        }
+        function moveToMain(){
+            location.replace("www.google.com");
+        }
+
+        loginId.addEventListener('keyup', color);
+        loginPw.addEventListener('keyup', color);
+        loginBtn.addEventListener('click',moveToMain);
+        </script>
+</body>
+</html>
