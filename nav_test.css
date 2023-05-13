@@ -2,7 +2,7 @@ body,html{
     margin: 0;
     padding: 0;
     width:100%;
-    height: 100%;
+    height: 100vh;
     font-family: '../fonts/Binggrae', sans-serif;
 }
 a{
@@ -37,21 +37,16 @@ a{
     
 }
 .main-nav {
->>>>>>> 35b1322003f1b86809e2b693156bb4f86cfe930d
     grid-area: nav;
     height: 100%;
     position: relative;
     background-color: aliceblue;
     box-sizing: border-box;
 }
-<<<<<<< HEAD
-.main-nav img{
-=======
 .main-nav .swan-logo{
     text-align: center;
 }
 .main-nav img:nth-child(2){
->>>>>>> 35b1322003f1b86809e2b693156bb4f86cfe930d
     float: left;
 }
 .main-nav .user-info{
