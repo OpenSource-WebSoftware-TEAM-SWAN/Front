@@ -4,12 +4,11 @@ body {
       "nav header header"
       "nav article article"
       "nav article2 article2";
-    grid-template-rows: 10% 10%;  
+    grid-template-rows: 10% 10vh 77.5vh;  
     grid-template-columns: 15% 1fr 15%;
     grid-row-gap: 1.25%;
     grid-column-gap: 1.25%;
 
-    height: 100%;
     margin: 0;
     font-family: 'melona';
     background: #005AA7;  /* fallback for old browsers */
@@ -18,7 +17,6 @@ body {
   }  
   
 #pageHeader, #footer, #mainArticle, #mainNav, #Article2 {
-  padding: 1.2em;
   border: 3px solid #000C3E;
   font-family: 'melona';
   }
@@ -28,14 +26,12 @@ body {
   }
 #mainArticle { 
   grid-area: article;
-  padding-top: 1em;  
   text-align: center; 
   justify-content: space-between;   
   }
 #Article2 { 
   grid-area: article2;
   overflow-y: scroll;
-  height: 80vh;      
   }
 
   #Article2::-webkit-scrollbar {
@@ -263,11 +259,7 @@ a.btn-card {
   position: flex;
 }
 
-<<<<<<< HEAD
 .btnWrite {
-=======
-.writebtn {
->>>>>>> 35b1322003f1b86809e2b693156bb4f86cfe930d
   text-align: center;
   font-size: 50px;
   position: fixed;
@@ -283,32 +275,21 @@ a.btn-card {
   outline: none;
   box-shadow: 3px 3px 3px black;
   transition-duration: 0.3s;
+  z-index: 10;
 }
 
-<<<<<<< HEAD
 .btnWrite:hover {
   background-color: #000C3E;
 }
 
 .btnWrite:active {
-=======
-.writebtn:hover {
-  background-color: #000C3E;
-}
-
-.writebtn:active {
->>>>>>> 35b1322003f1b86809e2b693156bb4f86cfe930d
   background-color: #F7591D;
   box-shadow: none;
   margin-top: 5px;
   margin-left: 5px;
 }
 
-<<<<<<< HEAD
 .btnWrite:focus {
-=======
-.writebtn:focus {
->>>>>>> 35b1322003f1b86809e2b693156bb4f86cfe930d
   border: none;
   outline: none;
 }
