@@ -8,14 +8,19 @@
     <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
     <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap-grid.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+    <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js"></script>
+    <!-- <script src="./bootstrap-5.3.0-alpha3-dist/js/mansonry.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
     <script src="./mainJquery.js"></script>
     <link rel="stylesheet" href="./nav_test.css">
     <title>더리더리두더기</title>
 </head>
 
 <body>
-
+    
+    <!--  side nav button  -->
     <div class="nav-btn">
         <button class="btn btn-primary" style="height:100px">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
@@ -23,21 +28,18 @@
             </svg>
         </button>
     </div>
-    <div class="images-btn">
-        <button class="btn btn-primary" style="height:100px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-            </svg>
-        </button>
-    </div>
-    <div class="container-fluid">
-        
+    <!-- end button -->
+
+    <div class="container-fluid main-page">
         <!-- side nav bar Grid -->
         <div class="main-nav">
             
+            <!-- Logo image -->
             <div class="swan-logo">
                 <img src="./images/swanlogo.png" alt="swan logo" class="rounded-circle" height="100px" width="200px">
             </div>
+            <!-- END Logo image -->
+
             <!-- user brief info -->
             <div class="user-info">
                 <img src="./images/sameple_image.jpeg" alt="user image" class="rounded-circle" height="100" width="100">
@@ -45,6 +47,7 @@
                     <p>Binwon <br> 일찍 일어나는 새가 일찍 죽어</p>
                 </div>
             </div>
+            <!-- END user brief unfo -->
 
             <!-- bookmark list -->
             <div class="bookmark">
@@ -61,23 +64,23 @@
                         id="bok-tog2">third toggle</a>
                 </div>
             </div>
+            <!-- END bookmark list -->
 
-
-            <!-- toggle -->
+            <!-- headline toggle -->
             <div class="headline-info">
                 <div class="first-toggle content-tog">
-                    <a href="#tog1" data-bs-toggle="collapse" id="tog0">대제목 선택</a>
-                </div>
-                <div class="second-toggle content-tog">
-                    <a href="#tog2" class="collapse" data-bs-toggle="collapse" data-bs-parnet="#tog0" id="tog1">second
-                        toggle</a>
-                </div>
-                <div class="third-toggle content-tog">
-                    <a href="#" class="collapse" data-bs-toggle="collapse" data-bs-parnet="#tog1 #tog0" id="tog2">third
-                        toggle</a>
+                    <a href="#tog1" data-toggle="collapse" data-target="#tog1" id="tog0">대제목 선택</a>
+                    <div class="second-toggle content-tog">
+                        <a href="#tog2" data-toggle="collapse" data-target="#tog2" id="tog1">second toggle</a>
+                        <div class="third-toggle content-tog">
+                            <a href="#"  id="tog2">third toggle</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <!-- END headline toggle -->
         </div>
+        <!-- END side nav bar -->
 
 
         <!-- Main feature Grid -->
@@ -87,8 +90,17 @@
                 <div class="recent-img">달성률</div>
             </div>
         </div>
+        <!-- END Main feature -->
+        
         <!-- All images contain Grid -->
         <div class="all-images">
+            <div class="images-btn">
+                <button class="btn btn-secondary" style="height:100px" data-bs-toggle="modal" data-bs-target="#images-modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                    </svg>
+                </button>
+            </div>
             <img src="./images/sameple_image.jpeg" alt="#" width="200" height="170"> <!-- 사진 누르면 시드  -->
             <img src="./images/sameple_image.jpeg" alt="#" width="200" height="170">
             <img src="./images/sameple_image.jpeg" alt="#" width="200" height="170">
@@ -96,7 +108,13 @@
             <img src="./images/sameple_image.jpeg" alt="#" width="200" height="170">
         </div>
     </div>
+    <!-- END whole grid section -->
+
+    <div id="images-modal" class="modal modal-transition" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+        
+        <!-- imagesModal.html Load -->
     </div>
+    
 </body>
 
 </html>

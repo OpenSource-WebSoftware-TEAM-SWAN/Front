@@ -12,4 +12,22 @@ $(document).ready(function () {
             $(".main-nav").removeClass("active");
         }
     });
+
+    $("#images-modal").load("./imagesModal.html");
+
+
+    // toggle
+    $('[data-toggle="collapse"]').on('click', function () {
+        $($(this).data('target')).collapse('toggle');
+    });
+    // 모달 열기
+    $('#images-modal').click(function(){
+        $('#images-modal').addClass('slide-in');
+    });
+    
+    // 모달 닫기
+    $('#images-modal').click(function(){
+        $('#images-modal').removeClass('slide-in').addClass('slide-out');
+    });
+    
 });
