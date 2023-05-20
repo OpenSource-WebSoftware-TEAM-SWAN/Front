@@ -16,10 +16,15 @@ $(document).ready(function () {
     $("#images-modal").load("./imagesModal.html");
 
 
-    // toggle
-    $('[data-toggle="collapse"]').on('click', function () {
-        $($(this).data('target')).collapse('toggle');
+    // add toogle
+    $('.add-title').click(function(){
+        var toggle=document.createElement("div")
+        toggle.classList.add("first-toggle");
+        toggle.innerHTML="SEX"
+        document.getElementById("headline").appendChild(toggle);
     });
+    
+
     // 모달 열기
     $('#images-modal').click(function(){
         $('#images-modal').addClass('slide-in');

@@ -7,33 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
     <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.rtl.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js"></script>
-    <!-- <script src="./bootstrap-5.3.0-alpha3-dist/js/mansonry.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
     <script src="./mainJquery.js"></script>
     <link rel="stylesheet" href="./nav_test.css">
     <title>더리더리두더기</title>
 </head>
 
 <body>
-    
+
     <!--  side nav button  -->
-    <div class="nav-btn">
-        <button class="btn btn-primary" style="height:100px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-            </svg>
-        </button>
-    </div>
+
+    <button class="nav-btn btn btn-primary" style="height:100px;padding: 3px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+            <path
+                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+        </svg>
+    </button>
+
     <!-- end button -->
 
     <div class="container-fluid main-page">
         <!-- side nav bar Grid -->
         <div class="main-nav">
-            
+
             <!-- Logo image -->
             <div class="swan-logo">
                 <img src="./images/swanlogo.png" alt="swan logo" class="rounded-circle" height="100px" width="200px">
@@ -50,30 +49,30 @@
             <!-- END user brief unfo -->
 
             <!-- bookmark list -->
-            <div class="bookmark">
-                <p>최근항목</p>
-                <div class="first-toggle content-tog">
-                    <a href="#bok-tog1" data-bs-toggle="collapse" id="bok-tog0">최근 seed</a>
-                </div>
-                <div class="second-toggle content-tog">
-                    <a href="#bok-tog2" class="collapse" data-bs-toggle="collapse" data-bs-parnet="#bok-tog0"
-                        id="bok-tog1">second toggle</a>
-                </div>
-                <div class="third-toggle content-tog">
-                    <a href="#" class="collapse" data-bs-toggle="collapse" data-bs-parnet="#bok-tog1 #bok-tog0"
-                        id="bok-tog2">third toggle</a>
+            <div class="bookmark accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#first">최근 항목</button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="first" data-bs-toggle="collapse">
+                        First Toggle
+                    </div>
                 </div>
             </div>
             <!-- END bookmark list -->
 
             <!-- headline toggle -->
-            <div class="headline-info">
+            <div class="headline-info" id="headline">
+                <button class="btn btn-success add-title">항목 추가</button>
+                <!-- 대제목 -->
                 <div class="first-toggle content-tog">
-                    <a href="#tog1" data-toggle="collapse" data-target="#tog1" id="tog0">대제목 선택</a>
-                    <div class="second-toggle content-tog">
-                        <a href="#tog2" data-toggle="collapse" data-target="#tog2" id="tog1">second toggle</a>
-                        <div class="third-toggle content-tog">
-                            <a href="#"  id="tog2">third toggle</a>
+                    <a href="#tog1" data-bs-toggle="collapse" data-target="#tog1" id="tog0">대제목 선택</a>
+                    <!-- 소제목 -->
+                    <div class="second-toggle content-tog collapse" id="tog1">
+                        <a href="#tog2" data-bs-toggle="collapse" data-target="#tog2">second toggle</a>
+                        <!-- 시드 -->
+                        <div class="third-toggle content-tog collapse" id="tog2">
+                            <a href="#">third toggle</a>
                         </div>
                     </div>
                 </div>
@@ -86,18 +85,25 @@
         <!-- Main feature Grid -->
         <div class="headline">
             <div class="recent-item">
-                <div class="recent-text">캘린더</div>
+                <div class="recent-text">
+                    <iframe class="mycal"
+                        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%233F51B5&ctz=Asia%2FSeoul&showPrint=0&showTabs=0&showNav=0&showCalendars=1&mode=MONTH&src=Ymlud29uMjM2QGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZmFtaWx5MTU2NzQ5MjU2ODUzNTgwMTA4NjZAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=a28uc291dGhfa29yZWEjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%237986CB&color=%2333B679&color=%23EF6C00&color=%230B8043"
+                        style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                </div>
                 <div class="recent-img">달성률</div>
             </div>
         </div>
         <!-- END Main feature -->
-        
+
         <!-- All images contain Grid -->
         <div class="all-images">
             <div class="images-btn">
-                <button class="btn btn-secondary" style="height:100px" data-bs-toggle="modal" data-bs-target="#images-modal">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                <button class="btn btn-secondary" style="height:100px;padding:3px" data-bs-toggle="modal"
+                    data-bs-target="#images-modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
                     </svg>
                 </button>
             </div>
@@ -106,15 +112,18 @@
             <img src="./images/sameple_image.jpeg" alt="#" width="200" height="170">
             <img src="./images/sameple_image.jpeg" alt="#" width="200" height="170">
             <img src="./images/sameple_image.jpeg" alt="#" width="200" height="170">
+            <img src="./images/sameple_image.jpeg" alt="#" width="200" height="170">
+            <img src="./images/sameple_image.jpeg" alt="#" width="200" height="170">
         </div>
     </div>
     <!-- END whole grid section -->
 
-    <div id="images-modal" class="modal modal-transition" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
-        
+    <div id="images-modal" class="modal modal-transition" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-hidden="true">
+
         <!-- imagesModal.html Load -->
     </div>
-    
+
 </body>
 
 </html>
