@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="swan.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
     <title>Swan</title>
 </head>
 <body class="fade">
@@ -17,7 +17,7 @@
         </div>
 
         <div class="login-wrapper">
-            <h3><a href="prototype.html">당신의 작은 한걸음</a></h3>
+            <h3><a href="prototype.html">With your a little step</a></h3>
             <img src="images/white-icon-swan.png" alt="" width="40px" height="40px">
             <form id="login-form">
                 <input type="text" name="userID" placeholder="Email" id="LOGIN_ID" autofocus>
@@ -26,6 +26,8 @@
                     <input type="checkbox" id="remember-check">Remember ID
                 </label>
                 <input type="submit" value="Login" id="LOGIN_BTN" disabled>
+                <p class="register"><a href="123213">Register</a></p>
+                <p class="register"><a href="123213">Forgotten password?</a></p>
             </form>
         </div>
         <div class="footer"></div>
@@ -47,10 +49,19 @@
                 loginBtn.style.backgroundColor = "#F7591D";
                 loginBtn.disabled = false;
             }else{
-                loginBtn.style.backgroundColor = "#C0DFFD";
+                loginBtn.style.backgroundColor = "#acb0ac";
                 loginBtn.disabled = true;
             }
         }
+
+        function hovering(){
+            loginBtn.style.opacity = "0.9";
+        }
+
+        function unhovering(){
+            loginBtn.style.opacity = "1.0";
+        }
+
         function moveToMain(){
             location.replace("www.google.com");
         }
@@ -58,6 +69,8 @@
         loginId.addEventListener('keyup', color);
         loginPw.addEventListener('keyup', color);
         loginBtn.addEventListener('click',moveToMain);
+        loginBtn.addEventListener('mouseover',hovering);
+        loginBtn.addEventListener('mouseout',unhovering);
         </script>
 </body>
 </html>

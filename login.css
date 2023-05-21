@@ -52,7 +52,7 @@
             height: 0;
             border-bottom: 7.5px solid transparent;
             border-top: 7.5px solid transparent;
-            border-left: 12.75px solid #F7591D;
+            border-left: 12.75px solid #f26322;
             border-right: 12.5px solid transparent;
             left: -110px;
             top: 205px;
@@ -91,7 +91,7 @@
 
         .login-wrapper{
             width: 400px;
-            height: 350px;
+            height: 400px;
             padding: 40px;
             box-sizing: border-box;
             border: 2px solid #D2D2D2;
@@ -131,7 +131,7 @@
         }
         #login-form > input[type="checkbox"]{
             display: none;
-        }
+        }  
         #login-form > label{
             color: #999999;
         }
@@ -146,6 +146,14 @@
             background-image: url("checkbox-active.png");
             background-repeat: no-repeat;
             background-size: contain;
+        }
+        #login-form .register {
+            text-align: right;
+            margin: 0 auto;
+            padding: 3px;
+        }
+        #login-form a:hover {
+            color: #f26322
         }
         @font-face {
             font-family: 'melona';
