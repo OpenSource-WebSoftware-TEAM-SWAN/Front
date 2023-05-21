@@ -12,6 +12,7 @@
     <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js"></script>
     <script src="./mainJquery.js"></script>
     <link rel="stylesheet" href="./firstPage.css">
+    <script src="./fullScreenScroll.js"></script>
     <title>더리더리두더기</title>
 </head>
 
@@ -29,7 +30,8 @@
 
     <!-- end button -->
 
-    <div class="container-fluid main-page">
+    <!-- whole layout -->
+    <div class="container-fluid main-page box">
         <!-- side nav bar Grid -->
         <div class="main-nav">
 
@@ -52,7 +54,8 @@
             <div class="bookmark accordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#first">최근 항목</button>
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#first">최근
+                            항목</button>
                     </h2>
                     <div class="accordion-collapse collapse" id="first" data-bs-toggle="collapse">
                         First Toggle
@@ -117,6 +120,16 @@
         </div>
     </div>
     <!-- END whole grid section -->
+
+    <div class="box all-images-full-screen">
+        <img src="./images/sameple_image.jpeg" alt="#" width="200" height="170"> <!-- 사진 누르면 시드  -->
+        <img src="./images/sameple_image.jpeg" alt="#" width="200" height="170">
+        <img src="./images/sameple_image.jpeg" alt="#" width="200" height="170">
+        <img src="./images/sameple_image.jpeg" alt="#" width="200" height="170">
+        <img src="./images/sameple_image.jpeg" alt="#" width="200" height="170">
+        <img src="./images/sameple_image.jpeg" alt="#" width="200" height="170">
+        <img src="./images/sameple_image.jpeg" alt="#" width="200" height="170">
+    </div>
 
     <div id="images-modal" class="modal modal-transition" data-bs-backdrop="static" data-bs-keyboard="false"
         tabindex="-1" aria-hidden="true">
