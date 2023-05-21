@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
     <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.rtl.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js"></script>
-    <script src="./mainJquery.js"></script>
+    
     <link rel="stylesheet" href="./firstPage.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js" defer></script>
+    <script src="./mainJquery.js"></script>
     <script src="./fullScreenScroll.js"></script>
+    
     <title>더리더리두더기</title>
 </head>
 
 <body>
 
     <!--  side nav button  -->
-
     <button class="nav-btn btn btn-primary" style="height:100px;padding: 3px;">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
             class="bi bi-caret-right-fill" viewBox="0 0 16 16">
@@ -89,9 +90,7 @@
         <div class="headline">
             <div class="recent-item">
                 <div class="recent-text">
-                    <iframe class="mycal"
-                        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%233F51B5&ctz=Asia%2FSeoul&showPrint=0&showTabs=0&showNav=0&showCalendars=1&mode=MONTH&src=Ymlud29uMjM2QGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZmFtaWx5MTU2NzQ5MjU2ODUzNTgwMTA4NjZAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=a28uc291dGhfa29yZWEjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%237986CB&color=%2333B679&color=%23EF6C00&color=%230B8043"
-                        style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                    <iframe src="./calendar/calendar.html" frameborder="0" class="mycal"></iframe>
                 </div>
                 <div class="recent-img">달성률</div>
             </div>
@@ -136,7 +135,7 @@
 
         <!-- imagesModal.html Load -->
     </div>
-
+    
 </body>
 
 </html>

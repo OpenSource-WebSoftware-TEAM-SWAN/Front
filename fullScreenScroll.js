@@ -9,7 +9,6 @@ window.onload = function () {
             if (!event) event = window.event;
             if (event.wheelDelta) {
                 delta = event.wheelDelta / 120;
-                if (window.opera) delta = -delta;
             } 
             else if (event.detail)
                 delta = -event.detail / 3;
@@ -37,7 +36,7 @@ window.onload = function () {
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
-                duration: 800, complete: function () {
+                duration: 100, complete: function () {
                 }
             });
         });
