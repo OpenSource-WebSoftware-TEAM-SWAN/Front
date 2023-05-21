@@ -12,10 +12,6 @@ $(function () {
         colorPicker,
         tempColor,
         $title = $('#event-title'),
-        // $description = $('#event-desc'),
-        // $allDay = $('#event-all-day'),
-        // $statusFree = $('#event-status-free'),
-        // $statusBusy = $('#event-status-busy'),
         $deleteButton = $('#event-delete'),
         $color = $('#event-color'),
         datePickerResponsive = {
@@ -33,18 +29,29 @@ $(function () {
         now = new Date(),
         myData = [{
             id: 1,
-            // start: '2023-05-08T13:00',
-            // end: '2023-05-08T13:45',
+            start: '2023-05-08T13:00',
+            end: '2023-05-08T13:45',
             title: 'Lunch @ Butcher\'s',
-            // description: '',
-            // allDay: false,
-            // free: true,
+            description: '',
+            allDay: false,
+            free: true,
             color: '#009788'
-        }, ];
+        },{
+            id: 1,
+            start: '2023-05-20',
+            end: '2023-05-21',
+            title: 'binwon calendar',
+            description: '',
+            allDay: false,
+            free: false,
+            color: '#009788'
+        }
+    ];
 
     function createAddPopup(elm) {
         // hide delete button inside add popup
         $deleteButton.hide();
+
         deleteEvent = true;
         restoreEvent = false;
 
@@ -58,10 +65,10 @@ $(function () {
                     calendar.updateEvent({
                         id: tempEvent.id,
                         title: tempEvent.title,
-                        // description: tempEvent.description,
-                        // allDay: tempEvent.allDay,
-                        // start: tempEvent.start,
-                        // end: tempEvent.end,
+                        description: tempEvent.description,
+                        allDay: tempEvent.allDay,
+                        start: tempEvent.start,
+                        end: tempEvent.end,
                         color: tempEvent.color,
                     });
                     // navigate the calendar to the correct view
@@ -70,7 +77,6 @@ $(function () {
                     popup.close();
                 },
                 cssClass: 'mbsc-popup-button-primary'
-                
             }]
         });
 
@@ -104,15 +110,13 @@ $(function () {
                 text: 'Save',
                 keyCode: 'enter',
                 handler: function () {
-                    var date = range.getVal();
                     var eventToSave = {
                         id: ev.id,
                         title: $title.val(),
-                        // description: $description.val(),
-                        // allDay: $allDay.mobiscroll('getInst').checked,
-                        // start: date[0],
-                        // end: date[1],
-                        // free: $statusFree.mobiscroll('getInst').checked,
+                        description: tempEvent.description,
+                        allDay: tempEvent.allDay,
+                        start: tempEvent.start,
+                        end: tempEvent.end,
                         color: ev.color,
                     };
                     // update event with the new properties on save button click
@@ -128,22 +132,7 @@ $(function () {
 
         // fill popup with the selected event data
         $title.mobiscroll('getInst').value = ev.title || '';
-        // $description.mobiscroll('getInst').value = ev.description || '';
-        // $allDay.mobiscroll('getInst').checked = ev.allDay || false;
-        // range.setVal([ev.start, ev.end]);
         selectColor(ev.color, true);
-
-        // if (ev.free) {
-        //     $statusFree.mobiscroll('getInst').checked = true;
-        // } else {
-        //     $statusBusy.mobiscroll('getInst').checked = true;
-        // }
-
-        // change range settings based on the allDay
-        // range.setOptions({
-        //     controls: ev.allDay ? ['date'] : ['datetime'],
-        //     responsive: ev.allDay ? datePickerResponsive : datetimePickerResponsive
-        // });
 
         // set anchor for the popup
         popup.setOptions({ anchor: args.domEvent.currentTarget });
@@ -155,9 +144,7 @@ $(function () {
         dragToCreate: true,
         dragToMove: true,
         dragToResize: true,
-        view: {
-            calendar: { labels: true }
-        },
+        
         data: myData,
         onEventClick: function (args) {
             oldEvent = $.extend({}, args.event);
@@ -169,9 +156,9 @@ $(function () {
         },
         onEventCreated: function (args) {
             popup.close();
+
             // store temporary event
             tempEvent = args.event;
-            console.log(tempEvent);
             createAddPopup(args.target);
         },
         onEventDeleted: function () {
@@ -189,7 +176,7 @@ $(function () {
 
     var popup = $('#demo-add-popup').mobiscroll().popup({
         display: 'center',
-        contentPadding: true,
+        contentPadding: false,
         onClose: function () {
             if (deleteEvent) {
                 calendar.removeEvent(tempEvent);
@@ -200,7 +187,7 @@ $(function () {
         responsive: {
             medium: {
                 display: 'anchored',
-                width: 500,
+                width: 400,
                 fullScreen: false,
                 touchUi: false
             }
@@ -212,45 +199,6 @@ $(function () {
         tempEvent.title = ev.target.value;
     });
 
-    // $description.on('change', function (ev) {
-    //     // update current event's title
-    //     tempEvent.description = ev.target.value;
-    // });
-
-    // $allDay.on('change', function () {
-    //     var checked = this.checked
-
-    //     // change range settings based on the allDay
-    //     range.setOptions({
-    //         controls: checked ? ['date'] : ['datetime'],
-    //         responsive: checked ? datePickerResponsive : datetimePickerResponsive
-    //     });
-
-    //     // update current event's allDay property
-    //     tempEvent.allDay = checked;
-    // });
-
-    // var range = $('#event-date').mobiscroll().datepicker({
-    //     controls: ['date'],
-    //     select: 'range',
-    //     startInput: '#start-input',
-    //     endInput: '#end-input',
-    //     showRangeLabels: false,
-    //     touchUi: true,
-    //     responsive: datePickerResponsive,
-    //     onChange: function (args) {
-    //         var date = args.value;
-
-    //         // update event's start date
-    //         // tempEvent.start = date[0];
-    //         // tempEvent.end = date[1];
-    //     }
-    // }).mobiscroll('getInst');
-
-    // $('input[name=event-status]').on('change', function () {
-    //     // update current event's free property
-    //     tempEvent.free = $statusFree.mobiscroll('getInst').checked;
-    // });
 
     $deleteButton.on('click', function () {
         // delete current event on button click
