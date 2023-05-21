@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./firstPage.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js" defer></script>
-    <script src="./mainJquery.js"></script>
+    <script defer src="./mainJquery.js"></script>
     <script src="./fullScreenScroll.js"></script>
     
     <title>더리더리두더기</title>
@@ -21,26 +21,14 @@
 <body>
 
     <!--  side nav button  -->
-    <button class="nav-btn btn btn-primary" style="height:100px;padding: 3px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-            class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-            <path
-                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-        </svg>
+    <button class="btnNaviBar">
+        S<br>W<br>A<br>N
     </button>
-
     <!-- end button -->
 
-    <!-- whole layout -->
-    <div class="container-fluid main-page box">
+    <div class="navModal">
         <!-- side nav bar Grid -->
         <div class="main-nav">
-
-            <!-- Logo image -->
-            <div class="swan-logo">
-                <img src="./images/swanlogo.png" alt="swan logo" class="rounded-circle" height="100px" width="200px">
-            </div>
-            <!-- END Logo image -->
 
             <!-- user brief info -->
             <div class="user-info">
@@ -51,19 +39,21 @@
             </div>
             <!-- END user brief unfo -->
 
-            <!-- bookmark list -->
-            <div class="bookmark accordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#first">최근
-                            항목</button>
-                    </h2>
-                    <div class="accordion-collapse collapse" id="first" data-bs-toggle="collapse">
-                        First Toggle
-                    </div>
+            <!-- Recent Seeds-->
+            <div class="divRecentSeed">
+                <div class="divRecentSeedIn">
+                    <button class="btnRecentSeed"><img class="imgDown" src="images/button_down.png" alt="down">최근&nbsp;항목</button>
+                    <button class="btnSearch"><img class="imgSearch" src="images/button_search.png" alt="search"></button>
                 </div>
             </div>
-            <!-- END bookmark list -->
+            <div class="divRecentSeedOpen">
+                <div class="divRencentContent">
+                    <a href="">seed1</a><br>
+                    <a href="">seed2</a><br>
+                    <a href="">seed3</a><br>
+                </div>
+            </div>
+            <!-- END Recent Seeds -->
 
             <!-- headline toggle -->
             <div class="headline-info" id="headline">
@@ -84,8 +74,10 @@
             <!-- END headline toggle -->
         </div>
         <!-- END side nav bar -->
-
-
+    </div>
+    
+    <!-- whole layout -->
+    <div class="container-fluid main-page box">
         <!-- Main feature Grid -->
         <div class="headline">
             <div class="recent-item">
