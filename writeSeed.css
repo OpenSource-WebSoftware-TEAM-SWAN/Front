@@ -1,60 +1,69 @@
-.writeSeed{  /*전체 모딜창*/
-position: absolute;
-top: 0;
-left: 0;
+.writeSeed {
+    /*전체 모딜창*/
+    position: absolute;
+    top: 0;
+    left: 0;
 
-width: 100%;
-height: 100vh;
+    width: 100%;
+    height: 100vh;
 
-display: none;
+    display: none;
 
-background-color: rgba(0, 0, 0, 0.7);
-z-index: 100;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
 }
 
 .writeSeed.show {
-display: block;
+    display: block;
 }
 
-.writeSeed_body { /*모딜창 내부*/
-overflow: scroll;
+.writeSeed_body {
+    /*모딜창 내부*/
+    overflow: scroll;
 
-position: absolute;
-top: 50%;
-left: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
-width: 60%;
-height: 85%;
+    width: 60%;
+    height: 85%;
 
-padding: 40px;
+    padding: 40px;
 
-text-align: center;
+    text-align: center;
 
-background-color: rgb(255, 255, 255);
-border-radius: 10px;
-box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
 
-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
-.writeSeed_body *{ /*모딜창 내부 스크롤*/
-display: block;
-text-align: left;
-overflow: scroll;
+
+.writeSeed_body * {
+    /*모딜창 내부 스크롤*/
+    display: block;
+    text-align: left;
+    overflow: scroll;
 }
-.writeSeed_body input[type=text]{ /**/
-width: 100%;
-padding: 8px 12px;
-border-radius: 4px;
-border: 0;
-background-color: lightgray;
-margin-bottom: 2%;
+
+.writeSeed_body input[type=text] {
+    /**/
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 0;
+    background-color: lightgray;
+    margin-bottom: 2%;
 }
-.writeSeed_body_img{ /*업로드된 이미지 프리뷰*/
-width: 100%;
-height: 30vh;
-background-color: aqua;
+
+.writeSeed_body_img {
+    /*업로드된 이미지 프리뷰*/
+    width: 100%;
+    height: 30vh;
+    background-color: aqua;
 }
-.writeSeed_body_img img{
-display: inline-block;
-width: 30%;
+
+.writeSeed_body_img img {
+    display: inline-block;
+    width: 30%;
 }
