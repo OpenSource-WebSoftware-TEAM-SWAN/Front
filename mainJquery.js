@@ -23,6 +23,7 @@ navModal.addEventListener('click', (event) => {
     }
 });
 
+var toggled=0;
 $(document).ready(function () {
 
     $("#images-modal").load("./imagesModal.html");
@@ -47,18 +48,20 @@ $(document).ready(function () {
     });
     
     // 최근항목
-    var toggled=0;
     $('.btnRecentSeed').click(function(){
-        $('.divRecentSeedOpen').toggle();
+        $('.divRecentSeedOpen').slideToggle("fast");
         if(toggled==1){
+            $('.imgToggle').attr("src","images/button_down.png");
             toggled=0;
         }
-        if(toggled==0){
+        else if(toggled==0){
+            $('.imgToggle').attr("src","images/button_up.png");
             toggled=1;
-        }
+        };
     });
 
-    $('.btnSearch').click(function(){
-        $('.divRecentSeedOpen').css({'display':'none'});
+    //검색
+    $('.btnSearch').focus(function(){
+        
     });
 });

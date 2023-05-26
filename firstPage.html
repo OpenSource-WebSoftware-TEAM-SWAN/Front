@@ -32,18 +32,25 @@
 
             <!-- user brief info -->
             <div class="user-info">
-                <img src="./images/sameple_image.jpeg" alt="user image" class="rounded-circle" height="100" width="100">
-                <div>
+                <div class="user-infoImg">
+                    <img src="./images/profile.jpg" alt="user image" style="width: 100%;">
+                </div>
+                <div class="user-infoStat">
                     <p>Binwon <br> 일찍 일어나는 새가 일찍 죽어</p>
                 </div>
             </div>
             <!-- END user brief unfo -->
 
             <!-- Recent Seeds-->
+            <div class="divSearch">
+                <form action="">
+                    <input id="searchBox" type="text">
+                    <button class="btnSearch"><img class="imgSearch" src="images/button_search.png" alt="search"></button>
+                </form>
+            </div>
             <div class="divRecentSeed">
                 <div class="divRecentSeedIn">
-                    <button class="btnRecentSeed"><img class="imgDown" src="images/button_down.png" alt="down">최근&nbsp;항목</button>
-                    <button class="btnSearch"><img class="imgSearch" src="images/button_search.png" alt="search"></button>
+                    <button class="btnRecentSeed"><img class="imgToggle" src="images/button_down.png" alt="down">&nbsp;최근&nbsp;항목</button>
                 </div>
             </div>
             <div class="divRecentSeedOpen">
@@ -55,7 +62,8 @@
             </div>
             <!-- END Recent Seeds -->
 
-            <!-- headline toggle -->
+            <!-- headline toggle -->\
+            <button class="add-title">항목 추가</button>
             <div class="headline-info" id="headline">
                 <button class="btn btn-success add-title">항목 추가</button>
                 <!-- 대제목 -->
