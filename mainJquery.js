@@ -2,6 +2,7 @@
 const body = document.querySelector('body');
 const navModal = document.querySelector('.navModal');
 const btnOpenPopup = document.querySelector('.btnNaviBar');
+const mainNav = document.querySelector('.main-nav');
 
 btnOpenPopup.addEventListener('click', () => {
     navModal.style.display='inline-block';
@@ -9,6 +10,7 @@ btnOpenPopup.addEventListener('click', () => {
 
     if (navModal.style.display='inline-block') {// 화면 고정
         body.style.overflow = 'hidden'; 
+        mainNav.style.overflowY = 'auto';
     }
 });
 
@@ -18,7 +20,7 @@ navModal.addEventListener('click', (event) => {
         btnOpenPopup.style.display='inline-block';
 
         if (navModal.style.display!='inline-block') {  // 화면 고정 해제
-        body.style.overflow = 'auto';
+            body.style.overflowX = 'hidden';
         }
     }
 });
@@ -28,7 +30,7 @@ $(document).ready(function () {
 
     $("#images-modal").load("./imagesModal.html");
 
-    // add toogle
+    // add togle
     $('.add-title').click(function(){
         var toggle=document.createElement("div")
         toggle.classList.add("first-toggle");

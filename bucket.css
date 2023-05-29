@@ -116,7 +116,15 @@ body {
   -webkit-user-select:none;
   -moz-user-select:none;
   -ms-user-select:none;
-  user-select:none
+  user-select:none;
+  overflow-x: hidden;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.main-nav::-webkit-scrollbar {
+  display: none;
 }
 
 .divRecentSeed{
@@ -198,7 +206,7 @@ body {
 }
 
 .divRecentSeedOpen{
-  margin: 0 2% 2% 2%;
+  margin: 0 2% 0% 2%;
   display: none;
   padding: 0 5%;
   width: auto;
@@ -217,7 +225,6 @@ body {
   display: flex;
   align-items: end;
   background-color: #f26322;
-  margin: 5% 0;
   box-shadow: 0px 2px 6px black;
   overflow: hidden;
 }
@@ -244,26 +251,37 @@ body {
 
 .headline-info{
   background-color: white;
+  margin-top: -4%;
 }
 
 
 .add-title {
-  
+  padding: 3% 0;
+  width: 100%;
+  border: 0;
+  background-color: #f26322;
 }
 
 .second-toggle {
   position: relative;
+
   left: 40px;
+
 }
 
 .third-toggle {
   position: relative;
+
   left: 40px;
+
 }
 
+
 .add-title {
+  padding: 3% 0;
   width: 100%;
-  margin-bottom: 50px;
+  border: 0;
+  background-color: #f26322;
 }
 
 #Article2::-webkit-scrollbar {
