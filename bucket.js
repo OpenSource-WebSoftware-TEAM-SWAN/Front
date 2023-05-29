@@ -1,11 +1,10 @@
-    const body = document.querySelector('body');
+    const bodyBucket = document.querySelector('body');
     const writeSeed = document.querySelector('.writeSeed');
-    const btnOpenPopup = document.querySelector('.btnWrite');
+    const btnWrite = document.querySelector('.btnWrite');
 
-
-    btnOpenPopup.addEventListener('click', () => {
+    btnWrite.addEventListener('click', () => {
     writeSeed.style.display = 'inline-block';// 화면 고정
-    body.style.overflow = 'hidden';
+    bodyBucket.style.overflow = 'hidden';
     });
 
     writeSeed.addEventListener('click', (event) => {
@@ -13,7 +12,7 @@
         writeSeed.style.display = '';
 
         if (writeSeed.style.display != 'inline-block') {  // 화면 고정 해제
-            body.style.overflow = 'auto';
+            bodyBucket.style.overflow = 'auto';
         }
     }
     });
