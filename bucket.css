@@ -44,6 +44,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 #Article2 {
@@ -54,234 +55,14 @@ body {
   height: 100%;
 }
 
-.btnNaviBar{
-  left: -5.8%;
-  width: 7.5%;
-  max-width: 200px;
-  min-width: 100px;
-  padding: 0.5% 0 0.5% 5.8%;
-  margin: 0;
-  top: 5%;
-  position: absolute;
-  border: 0;
-  background-color: #000c3e;
-  color: white;
-  font-family: 'fira';
-  border-radius: 0% 5% 5% 0%;
-  text-align: center;
-  font-weight: bold;
-  line-height: 130%;
-  opacity: 0.8;
-  z-index: 5;
-}
-
-.btnNaviBar:hover{
-  background-color: #f26322;
-  box-shadow: 2px 0px 4px white;
-  left: -5.4%;
-  padding: 0.5% 0 0.5% 5.4%;
-  opacity: 1;
-}
-
-.navModal{
-  position: absolute;
-  z-index: 4;
-
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
+.elementSub{
   display: none;
-
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 3;
-}
-.navModal.show{
-  display: block;
+  left: 5%;
 }
 
-.main-nav {
-  grid-column: 1/2;
-  grid-row: 1/5;
-  height: 100%;
-  position: absolute;
-  background-color: #000c3e;
-  box-sizing: border-box;
-  width: 17%;
-  min-width: 300px;
-  max-width: 1000px;
-  box-shadow: 0px 2px 6px black;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
-  overflow-x: hidden;
-
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.main-nav::-webkit-scrollbar {
+.elementFeed{
   display: none;
-}
-
-.divRecentSeed{
-  position: relative;
-  background-color: #000c3e;
-  width: 100%;
-  height: 7.5%;
-  padding: 2% 2.5% 2.5% 2.5%;
-}
-
-.divRecentSeedIn{
-  position: absolute;
-  background-color: white;
-  width: 95%;
-  height: 75%;
-  border-radius: 10px;
-}
-
-.btnRecentSeed{
-  position: absolute;
-  width: 80%;
-  height: 100%;
-  left: 15%;
-  background-color: white;
-  text-align: left;
-  border: 0;
-  border-radius: 10px;
-  background-color: transparent;
-  z-index: 2;
-}
-
-.divSearch{
-  width: 94%;
-  background-color: white;
-  margin: 3%;
-  border: 1px solid #000c3e;
-}
-
-.btnSearch{
-  margin: 1% 0;
-  margin-left: -4%;
-  margin-bottom: 2%;
-  padding: 0 0;
-  width: 15%;
-  background-color: transparent;
-  border: none;
-  border-radius: 6px;
-}
-
-.btnSearch:hover{
-  background-color: #acb0ac;
-}
-
-.imgSearch{
-  width: 100%;
-}
-
-#searchBox{
-  width: 85%;
-  border: 0;
-  outline: none;
-  padding: 5%;
-}
-
-.imgToggle{
-  position: absolute;
-  width: 10%;
-  height: 35%;
-  top: 35%;
-  left: -10%;
-}
-
-.imgDown{
-  position: absolute;
-  width: 10%;
-  height: 35%;
-  top: 35%;
-  left: -10%;
-}
-
-.divRecentSeedOpen{
-  margin: 0 2% 0% 2%;
-  display: none;
-  padding: 0 5%;
-  width: auto;
-  border-radius: 6px;
-  background-color: white;
-}
-
-.divRencentContent a{
-  color: black;
-  text-decoration: none;
-}
-
-.user-info {
-  width: 103%;
-  height: 18%;
-  display: flex;
-  align-items: end;
-  background-color: #f26322;
-  box-shadow: 0px 2px 6px black;
-  overflow: hidden;
-}
-
-.user-infoStat{
-  height: 85%;
-  background-color: #fa7f41;
-  border-radius: 4px;
-  align-items: center;
-  margin-bottom: 5%;
-}
-
-.user-infoImg{
-  width: 35%;
-  height: 95%;
-  margin: 1%;
-  border: 1px solid #000c3e;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  display: flex;
-  align-items: center;
-}
-
-.headline-info{
-  background-color: white;
-  margin-top: -4%;
-}
-
-
-.add-title {
-  padding: 3% 0;
-  width: 100%;
-  border: 0;
-  background-color: #f26322;
-}
-
-.second-toggle {
-  position: relative;
-
-  left: 40px;
-
-}
-
-.third-toggle {
-  position: relative;
-
-  left: 40px;
-
-}
-
-
-.add-title {
-  padding: 3% 0;
-  width: 100%;
-  border: 0;
-  background-color: #f26322;
+  left: 10%;
 }
 
 #Article2::-webkit-scrollbar {
@@ -549,7 +330,7 @@ a.btn-card {
   outline: none;
   box-shadow: 3px 3px 3px black;
   transition-duration: 0.3s;
-  z-index: 10;
+  z-index: 2.5;
 }
 
 .btnWrite:hover {

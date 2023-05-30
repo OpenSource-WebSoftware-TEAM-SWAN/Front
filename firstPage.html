@@ -10,16 +10,18 @@
     <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.rtl.min.css">
     
     <link rel="stylesheet" href="./firstPage.css">
+    <link rel="stylesheet" href="navibar.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js" defer></script>
     <script defer src="./mainJquery.js"></script>
     <script src="./fullScreenScroll.js"></script>
+    <script defer src="navibar.js"></script>
     
     <title>더리더리두더기</title>
 </head>
 
 <body>
-
+    <!--네비바 버튼-------------------------------------------------------->
     <!--  side nav button  -->
     <button class="btnNaviBar">
         S<br>W<br>A<br>N
@@ -66,15 +68,7 @@
             <button class="add-title">항목 추가</button>
                 <!-- 대제목 -->
                 <div class="first-toggle content-tog">
-                    <a href="#tog1" data-bs-toggle="collapse" data-target="#tog1" id="tog0">대제목 선택</a>
-                    <!-- 소제목 -->
-                    <div class="second-toggle content-tog collapse" id="tog1">
-                        <a href="#tog2" data-bs-toggle="collapse" data-target="#tog2">second toggle</a>
-                        <!-- 시드 -->
-                        <div class="third-toggle content-tog collapse" id="tog2">
-                            <a href="#">third toggle</a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             <!-- END headline toggle -->
@@ -82,6 +76,7 @@
         </div>
         <!-- END side nav bar -->
     </div>
+    <!---------------------------------------------------------->
     
     <!-- whole layout -->
     <div class="container-fluid main-page box">
