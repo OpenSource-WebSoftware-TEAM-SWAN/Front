@@ -35,34 +35,54 @@ $(document).ready(function () {
     $('.add-title').click(function(){
         let str;
         if(titleCnt>0){
-        str="<div class='elementGoal'>"+
-                "<a class='aGoal' href='#'>새 버킷리스트("+titleCnt+")</a>"+
-                "<div>"+
-                    "<button>수정</button>"+
+        str="<ul class='elementGoal'>"+
+                "<img class='imgGoal' src='./images/button_hirDown.png'>"+
+                "<li><a class='aGoal'>새 목표("+titleCnt+")</a></li>"+
+                "<li class='exception'><div style='float:right;'>"+
+                    "<button class='editGoal'>수정</button>"+"&nbsp;"+
                     "<button>삭제</button>"+
-                "</div>"+
-                "<div class='elementSub'>"+
-                    "<a href='#'>새 소제목</a>"+
-                    "<div class='elementFeed'>"+
-                        "<a href='#'>새 피드</a>"+
-                    "</div>"+
-                "</div>"+
-            "</div>"
+                "</div></li>"+
+                "<ul class='elementSub' style='clear:both;'>"+
+                    "<img class='imgSub' src='./images/button_hirDown.png'>"+
+                    "<li><a class='aSub'>새 소제목</a></li>"+
+                    "<li class='exception'><div style='float:right;'>"+
+                        "<button class='editGoal'>수정</button>"+"&nbsp;"+
+                        "<button>삭제</button>"+
+                    "</div></li>"+
+                    "<ul class='elementFeed' style='clear:both;'>"+
+                        "<li><a href='#'>새 피드</a></li>"+
+                        "<li class='exception'><div style='float:right;'>"+
+                            "<button class='editGoal'>수정</button>"+"&nbsp;"+
+                            "<button>삭제</button>"+
+                        "</div></li>"+
+                    "</ul>"+
+                "</ul>"+
+            "</ul>"
         }
         else{
-        str="<div class='elementGoal'>"+
-                "<a class='aGoal' href='#'>새 버킷리스트</a>"+
-                "<div>"+
-                    "<button>수정</button>"+
+        str="<ul class='elementGoal'>"+
+                "<img class='imgGoal' src='./images/button_hirDown.png'>"+
+                "<li><a class='aGoal'>새 목표</a></li>"+
+                "<li class='exception'><div style='float:right;'>"+
+                    "<button class='editGoal'>수정</button>"+"&nbsp;"+
                     "<button>삭제</button>"+
-                "</div>"+
-                "<div class='elementSub'>"+
-                    "<a href='#'>새 소제목</a>"+
-                    "<div class='elementFeed'>"+
-                        "<a href='#'>새 피드</a>"+
-                    "</div>"+
-                "</div>"+
-            "</div>"
+                "</div></li>"+
+                "<ul class='elementSub' style='clear:both;'>"+
+                    "<img class='imgSub' src='./images/button_hirDown.png'>"+
+                    "<li><a class='aSub'>새 소제목</a></li>"+
+                    "<li class='exception'><div style='float:right;'>"+
+                        "<button class='editGoal'>수정</button>"+"&nbsp;"+
+                        "<button>삭제</button>"+
+                    "</div></li>"+
+                    "<ul class='elementFeed' style='clear:both;'>"+
+                        "<li><a href='#'>새 피드</a></li>"+
+                        "<li class='exception'><div style='float:right;'>"+
+                            "<button class='editGoal'>수정</button>"+"&nbsp;"+
+                            "<button>삭제</button>"+
+                        "</div></li>"+
+                    "</ul>"+
+                "</ul>"+
+            "</ul>"
         }
         $('.headline-info').prepend(str);
         titleCnt++;
@@ -93,6 +113,29 @@ $(document).ready(function () {
     });
 });
 
-$(document).on('click','.aGoal',function(){
-    $(this).next('div').next('div').css('display','block');
+$(document).on('click','.imgGoal',function(){
+    $(this).next().next().next().toggle();
+});
+$(document).on('click','.imgSub',function(){
+    $(this).next().next().next().toggle();
+});
+
+$(document).on('click', '.editGoal', function() {
+    // $(this).css('display','none'); 수정 시 버튼들 사라지기
+    const editGoalElement = $(this).parent().parent().prev().children();
+    editGoalElement.replaceWith(function() {
+        let changeGoalElement = $(this).text();
+        return $("<input class='aGoal' style='width: 70%'>", {
+        type: 'text',
+        value: changeGoalElement
+        }).on('keypress', function(e) {
+        if (e.keyCode === 13) {
+            let newGoalElement = $(this).val();
+            $(this).replaceWith(function() {
+            return $("<a class='aGoal' href='#'>" + newGoalElement + "</a>");
+            
+            });
+        }
+        });
+    });
 });

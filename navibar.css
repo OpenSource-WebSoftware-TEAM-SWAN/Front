@@ -1,3 +1,13 @@
+a{
+    text-decoration: none !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+li{
+    list-style: none;
+}
 /*네비바***************************************************/
 @font-face {
     font-family: 'melona';
@@ -281,33 +291,50 @@
 }
 
 .headline-info div{
-    padding: 0.5% 3%;
+    padding: 0.5% 2%;
 }
 
 .headline-info > div:hover{
     background-color: rgba(0,0,0,0.1);
 }
 
-.elementGoal button{
-    font-size: small;
-}
-
 .elementGoal > div{
     display: none;
 }
 
-.elementGoal:hover > div{
-    display: inline-block;
-}
-
 .elementSub{
+    position: relative;
     display: none;
-    left: 5%;
+    padding-left: 5%;
 }
 
 .elementFeed{
+    position: relative;
     display: none;
-    left: 10%;
+}
+
+.elementGoal{
+    text-decoration: none;
+    padding: 0;
+}
+
+.elementGoal, li{
+    display: inline-block;
+}
+
+.elementGoal ul{
+    padding-right: 0;
+}
+
+.exception{
+    display: inline;
+}
+
+
+.elementGoal button{
+    font-size: x-small;
+    background-color: rgba(0,0,0,0.1);
+    border: 0;
 }
 
 .elementGoal:hover > .elementSub{
@@ -316,11 +343,16 @@
 
 .headline-info *{
     color: black;
-    text-decoration: none;
 }
 
 .headline-info *:hover{
     color: rgba(0,0,0,0.5);
-    text-decoration: none;
 }
+
+.imgGoal, .imgSub{
+    margin: 0 5% 0 2%;
+    object-fit: cover;
+    width: 6%;
+}
+
 /****************************************************/
