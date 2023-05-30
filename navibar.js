@@ -64,7 +64,6 @@ $(document).ready(function () {
                 "</div>"+
             "</div>"
         }
-
         $('.headline-info').prepend(str);
         titleCnt++;
     });
@@ -93,6 +92,7 @@ $(document).ready(function () {
         $('.divSearch').css('border','1px solid black');
     });
 });
+
 $(document).on('click','.aGoal',function(){
     $(this).next('div').next('div').css('display','block');
 });

@@ -5,6 +5,11 @@ body{
     background-color: white;
 }
 
+@font-face {
+    font-family: 'melona';
+    src: url('./fonts/BinggraeMelona-Bold.ttf') format('truetype');
+}
+
 @keyframes slideIn {
     0% {
         transform: translateY(-200px);
@@ -37,11 +42,6 @@ body{
     }
 }
 
-@font-face {
-    font-family: 'melona';
-    src: url('./fonts/BinggraeMelona-Bold.ttf') format('truetype');
-}
-
 /* 전체 레이아웃 */
 .container-fluid.main-page {
     padding: 0;
@@ -71,7 +71,7 @@ body{
 }
 
 .main-nav::-webkit-scrollbar {
-display: none;
+    display: none;
 }
 
 .main-nav.slide-in.active+.headline {

@@ -49,16 +49,6 @@ body {
   height: 100%;
 }
 
-.elementSub{
-  display: none;
-  left: 5%;
-}
-
-.elementFeed{
-  display: none;
-  left: 10%;
-}
-
 #Article2::-webkit-scrollbar {
   display: none;
 }

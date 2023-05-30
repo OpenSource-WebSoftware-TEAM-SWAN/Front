@@ -1,4 +1,9 @@
 /*네비바***************************************************/
+@font-face {
+    font-family: 'melona';
+    src: url('./fonts/BinggraeMelona-Bold.ttf') format('truetype');
+}
+
 .btnNaviBar{
     left: -5.8%;
     width: 7.5%;
@@ -52,6 +57,8 @@
 }
 
 .main-nav {
+    font-family: 'melona';
+
     border: #000c3e 4px solid;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -293,15 +300,26 @@
     display: inline-block;
 }
 
+.elementSub{
+    display: none;
+    left: 5%;
+}
+
+.elementFeed{
+    display: none;
+    left: 10%;
+}
+
 .elementGoal:hover > .elementSub{
     display: none;
 }
 
-.headline-info div a{
+.headline-info *{
     color: black;
+    text-decoration: none;
 }
 
-.headline-info div a:hover{
+.headline-info *:hover{
     color: rgba(0,0,0,0.5);
     text-decoration: none;
 }
