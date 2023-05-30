@@ -5,12 +5,13 @@
   <title>prototype</title>
   <link href="bucket.css" rel="stylesheet">
   <link rel="stylesheet" href="writeSeed.css">
+  <link rel="stylesheet" href="navibar.css">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script defer src="bucket.js"></script>
   <script defer src="mainJquery.js"></script>
+  <script defer src="navibar.js"></script>
 
   <style>
 
@@ -55,20 +56,24 @@
     </div>
   </div>
 
-
+    <!--네비바 버튼-------------------------------------------------------->
   <div class="whole-layout">
     <button class="btnNaviBar">
       S<br>W<br>A<br>N
     </button>
     <div class="navModal">
+      <div>
+        
+      </div>
       <div class="main-nav">
         <!-- user brief info -->
-        <div class="user-info">
+        <div class="user-info" id="navTop">
             <div class="user-infoImg">
                 <img src="./images/profile.jpg" alt="user image" style="width: 100%;">
             </div>
             <div class="user-infoStat">
-                <p>Binwon <br> 일찍 일어나는 새가 일찍 죽어</p>
+                <p id="userName">빈원</p>
+                <p id="userIntro">오늘도 힘차고 굳센 하루!</p>
             </div>
         </div>
         <!-- END user brief unfo -->
@@ -86,7 +91,7 @@
             </div>
         </div>
         <div class="divRecentSeedOpen">
-            <div class="divRencentContent">
+            <div class="divRecentContent">
                 <a href="">seed1</a><br>
                 <a href="">seed2</a><br>
                 <a href="">seed3</a><br>
@@ -94,26 +99,21 @@
         </div>
         <!-- END Recent Seeds -->
 
-        <!-- headline toggle -->\
-        <button class="add-title">항목 추가</button>
+        <!-- headline toggle -->
+        <button class="add-title">버킷리스트 추가</button>
         <div class="headline-info" id="headline">
-            <button class="btn btn-success add-title">항목 추가</button>
-            <!-- 대제목 -->
-            <div class="first-toggle content-tog">
-                <a href="#tog1" data-bs-toggle="collapse" data-target="#tog1" id="tog0">대제목 선택</a>
-                <!-- 소제목 -->
-                <div class="second-toggle content-tog collapse" id="tog1">
-                    <a href="#tog2" data-bs-toggle="collapse" data-target="#tog2">second toggle</a>
-                    <!-- 시드 -->
-                    <div class="third-toggle content-tog collapse" id="tog2">
-                        <a href="#">third toggle</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+          </div class="btntoTop">
         <!-- END headline toggle -->
+        <div class="btntoTop">
+          <a href="#navTop">Top</a>
+        </div>
+
     </div>
     </div>
+    <!---------------------------------------------------------->
+
+
   <div id="pageHeader">
     <h1>This is Daejemok</h1>
   </div>
