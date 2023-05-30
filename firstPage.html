@@ -9,34 +9,37 @@
     <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.rtl.min.css">
     
-    <link rel="stylesheet" href="./firstPage.css">
     <link rel="stylesheet" href="navibar.css">
+    <link rel="stylesheet" href="firstPage.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js" defer></script>
     <script defer src="./mainJquery.js"></script>
     <script src="./fullScreenScroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js"></script>
+    <script defer src="navibar.js"></script>
     <script src="./barchart.js"></script>
     <title>더리더리두더기</title>
 </head>
 
 <body>
-    <!--  side nav button  -->
-    <button class="btnNaviBar">
-        S<br>W<br>A<br>N
-    </button>
-    <!-- end button -->
-    <div class="navModal">
-        <!-- side nav bar Grid -->
-        <div class="main-nav">
-
+    <!--네비바 버튼-------------------------------------------------------->
+    <div class="whole-layout">
+        <button class="btnNaviBar">
+            S<br>W<br>A<br>N
+        </button>
+        <div class="navModal">
+            <div>
+            
+            </div>
+            <div class="main-nav">
             <!-- user brief info -->
             <div class="user-info" id="navTop">
                 <div class="user-infoImg">
                     <img src="./images/profile.jpg" alt="user image" style="width: 100%;">
                 </div>
                 <div class="user-infoStat">
-                    <p>Binwon <br> 일찍 일어나는 새가 일찍 죽어</p>
+                    <p id="userName">빈원</p>
+                    <p id="userIntro">오늘도 힘차고 굳센 하루!</p>
                 </div>
             </div>
             <!-- END user brief unfo -->
@@ -54,7 +57,7 @@
                 </div>
             </div>
             <div class="divRecentSeedOpen">
-                <div class="divRencentContent">
+                <div class="divRecentContent">
                     <a href="">seed1</a><br>
                     <a href="">seed2</a><br>
                     <a href="">seed3</a><br>
@@ -62,20 +65,18 @@
             </div>
             <!-- END Recent Seeds -->
 
-            <!-- headline toggle -->\
+            <!-- headline toggle -->
+            <button class="add-title">버킷리스트 추가</button>
             <div class="headline-info" id="headline">
-            <button class="add-title">항목 추가</button>
-                <!-- 대제목 -->
-                <div class="first-toggle content-tog">
-                    
-                </div>
-            </div>
+
+                </div class="btntoTop">
             <!-- END headline toggle -->
-            <a href="#navTop">ㅁㄴㅇㄹ</a>
+            <div class="btntoTop">
+                <a href="#navTop">Top</a>
+            </div>
         </div>
-        <!-- END side nav bar -->
     </div>
-    <!---------------------------------------------------------->
+        <!---------------------------------------------------------->
     
     <!-- whole layout -->
     <div class="container-fluid main-page box">
