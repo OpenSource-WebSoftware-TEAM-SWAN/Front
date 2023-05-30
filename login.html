@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.rtl.min.css">
     <link href="login.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js" defer></script>
+
     <title>Swan</title>
 </head>
+
 <body class="fade">
-    <div class="container">
+
+
+    <div class="container-login">
         <div class="header"></div>
-        <div class="swan">
+        <div id="swan">
             <div class="logo-orange"></div>
             <div class="logo-black"></div>
-            <h2 class="swanlogo">SWAN</h2>
+            <p class="swanlogo fw-bold">SWAN</p>
         </div>
 
         <div class="login-wrapper">
@@ -26,17 +35,36 @@
                     <input type="checkbox" id="remember-check">Remember ID
                 </label>
                 <input type="submit" value="Login" id="LOGIN_BTN" disabled>
-                <p class="register"><a href="123213">Register</a></p>
-                <p class="register"><a href="123213">Forgotten password?</a></p>
+                <p class="register" id="registerBtn"><a href="#" data-toggle="modal" data-target="#registerModal">Register</a></p>
             </form>
         </div>
-        <div class="footer"></div>
+
+        <!-- Modal -->
+        <div class="modal register-modal" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form id="login-form">
+                            <input type="text" name="userID" placeholder="Email" id="LOGIN_ID" autofocus>
+                            <input type="text" name="userName" placeholder="Name" id="USER_NAME" autofocus>
+                            <input type="password" name="userPW" placeholder="Password" id="LOGIN_PW">
+                            <input type="password" name="userPW" placeholder="confirm Password" id="LOGIN_PW">
+                            <input type="submit" value="Register" id="LOGIN_BTN" disabled>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-        <script>
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
             window.setTimeout(() => {
-            document.body.classList.remove('fade');
-            return false;
+                document.body.classList.remove('fade');
+                return false;
             });
         });
         const loginId = document.getElementById('LOGIN_ID');
@@ -44,33 +72,38 @@
         const loginBtn = document.getElementById('LOGIN_BTN');
 
         function color() {
-            if((loginId.value.length>0 && loginId.value.indexOf("@")!==-1) 
-                && loginPw.value.length>=4){
+            if ((loginId.value.length > 0 && loginId.value.indexOf("@") !== -1)
+                && loginPw.value.length >= 4) {
                 loginBtn.style.backgroundColor = "#F7591D";
                 loginBtn.disabled = false;
-            }else{
+            } else {
                 loginBtn.style.backgroundColor = "#acb0ac";
                 loginBtn.disabled = true;
             }
         }
 
-        function hovering(){
+        function hovering() {
             loginBtn.style.opacity = "0.9";
         }
 
-        function unhovering(){
+        function unhovering() {
             loginBtn.style.opacity = "1.0";
         }
 
-        function moveToMain(){
+        function moveToMain() {
             location.replace("www.google.com");
         }
 
         loginId.addEventListener('keyup', color);
         loginPw.addEventListener('keyup', color);
-        loginBtn.addEventListener('click',moveToMain);
-        loginBtn.addEventListener('mouseover',hovering);
-        loginBtn.addEventListener('mouseout',unhovering);
-        </script>
+        loginBtn.addEventListener('click', moveToMain);
+        loginBtn.addEventListener('mouseover', hovering);
+        loginBtn.addEventListener('mouseout', unhovering);
+        $('#registerBtn').click(function(e){
+			e.preventDefault();
+			$('#registerModal').modal("show");
+		});
+    </script>
 </body>
+
 </html>

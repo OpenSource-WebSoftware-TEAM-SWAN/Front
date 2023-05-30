@@ -16,7 +16,7 @@
 
         a:hover, a:active {text-decoration: none; color:#000C3E;}
 
-        .container {  display: grid;
+        .container-login {  display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 33.33% 33.33% 33.33%;
             gap: 0px 0px;
@@ -29,20 +29,23 @@
 
         .header { grid-area: header; }
 
-        .swan { 
+        #swan { 
             text-align: center;
             grid-area: swan;
             font-family: 'fira';
             font-style: normal;
-            font-weight: 500;
-            font-size: 100px;
+            font-weight: 2000;
+            font-size: 150px;
             margin-top: -30px;
             color: #FFFFFF;
         }
 
         .swanlogo {
+            position: relative;
             -webkit-text-stroke: 0px gray;
             text-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+            top: 130px;
+            right: 33px;
         }
 
         .logo-orange {
@@ -54,9 +57,10 @@
             border-top: 7.5px solid transparent;
             border-left: 12.75px solid #f26322;
             border-right: 12.5px solid transparent;
-            left: -110px;
-            top: 205px;
+            left: -142px;
+            top: 233px;
             transform: rotate(162.5deg);
+            z-index: 1;
         }
 
         .logo-black {
@@ -68,9 +72,10 @@
             border-top: 7.65px solid transparent;
             border-left: 12.95px solid #000C3E;
             border-right: 12.95px solid transparent;
-            left: -99.7px;
-            top: 179.26px;
+            left: -131px;
+            top: 208px;
             transform: rotate(-16.5deg);
+            z-index: 1;
         }
 
         .login-wrapper { 
@@ -78,17 +83,21 @@
             margin: 0 auto;
         }
 
-        .footer { grid-area: footer; }
-
-        @media (max-width: 1000px) {   
+        /* @media (max-width: 1000px) {   
             .container {    
                 grid-template-columns: 1fr;    
                 grid-template-areas:          
                 "swan"     
                 "login-wrapper"     
                 "footer";   
-        }}
-
+        }} */
+        .modal-content{
+            background-color: #000C3E;
+            border: 2px solid white;
+        }
+        .modal-header{
+            color: white;
+        }
         .login-wrapper{
             width: 400px;
             height: 400px;
