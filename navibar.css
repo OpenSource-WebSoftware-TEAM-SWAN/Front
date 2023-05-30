@@ -84,13 +84,13 @@
 .btntoTop{
     position: fixed;
     padding: 0.3% 0.7%;
-    left: 22%;
-    bottom: 0;
-    text-align: center;
+    left: -2%;
+    bottom: 2%;
+    text-align: right;
     background-color: #acb0ac;
     width: 5%;
-    border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 .btntoTop a{
