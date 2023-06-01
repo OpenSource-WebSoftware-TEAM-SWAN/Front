@@ -91,6 +91,18 @@ body {
   color:#F7591D !important;
 }
 
+.linkPlus{
+  color: #747373;
+  border: none !important;
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+.linkPlus:hover{
+  color: #747373;
+  background-color: rgba(0,0,0,0.1);
+}
+
 @font-face {
   font-family: 'melona';
   src: url('./fonts/BinggraeMelona-Bold.ttf') format('truetype');

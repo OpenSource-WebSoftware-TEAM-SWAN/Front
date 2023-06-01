@@ -10,6 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script defer src="mainJquery.js"></script>
   <script defer src="navibar.js"></script>
+  <script defer src="writeSeed.js"></script>
   <link href="bucket.css" rel="stylesheet">
 </head>
 
@@ -19,34 +20,31 @@
       <div class="writeSeed_body">
         <!--모달창 내부-->
         <form action="">
-          <p style="font-size: 1.5em;">시드 작성</p>
+          <p style="font-size: 1.5em;">Create Feed</p>
           <hr>
           <div>
-            <label for="seedGoal">목표</label>
-            <input id="seedGoal" type="text" value="제목">
+            <label for="seedGoal">New goal</label>
+            <input id="seedGoal" type="text" placeholder="Write your goal name">
           </div>
           <div>
-            <label for="seedMemo">메모</label>
-            <input id="seedMemo" type="text" value="메모">
+            <label for="seedMemo">Memo</label>
+            <input id="seedMemo" type="text" placeholder="Write your memo">
           </div>
           <hr>
           <div class="writeSeed_body_img">
             <!--사진 추가부분-->
-            <img id="img" src="images/7YWM7Iqk7Yq4.jpg" alt="">
-            <img id="img" src="images/7YWM7Iqk7Yq4.jpg" alt="">
-            <img id="img" src="images/7YWM7Iqk7Yq4.jpg" alt="">
-            <img id="img" src="images/7YWM7Iqk7Yq4.jpg" alt="">
-            <img id="img" src="images/7YWM7Iqk7Yq4.jpg" alt="">
-            <img id="img" src="images/7YWM7Iqk7Yq4.jpg" alt="">
-            <img id="img" src="images/7YWM7Iqk7Yq4.jpg" alt="">
-            <img id="img" src="images/7YWM7Iqk7Yq4.jpg" alt="">
-            <img id="img" src="images/7YWM7Iqk7Yq4.jpg" alt="">
+            <input type="file" id="uploadImg" accept=".gif, .jpg, .png" onchange="changeValue(this)" style="display: none;"/>
+            <img id="seedImg" src="images/이지형.png" alt="">
+            <button class="writeSeed_body_imgPlus"><img src="images/writeSeed_Plus.png" alt=""></button>
           </div>
           <div class="writeSeed_body_btn">
-
+            <!--추가기능-->
+            
+            <!--추가기능 끝-->
           </div>
           <hr>
         </form>
+        <!--모달창 내부 끝-->
       </div>
     </div>
   </div>
@@ -112,13 +110,15 @@
   </div>
   <div id="tabs">
   <nav>
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <div class="nav nav-tabs" id="nav-tab" role="tablist" >
         <button class="nav-link active custom-button" id="nav-fr-tab" data-bs-toggle="tab" data-bs-target="#nav-fr" type="button" role="tab" aria-controls="nav-fr" aria-selected="true">프랑스</button>
         <button class="nav-link custom-button" id="nav-uk-tab" data-bs-toggle="tab" data-bs-target="#nav-uk" type="button" role="tab" aria-controls="nav-uk" aria-selected="false">영국</button>
         <button class="nav-link custom-button" id="nav-sp-tab" data-bs-toggle="tab" data-bs-target="#nav-sp" type="button" role="tab" aria-controls="nav-sp" aria-selected="false">스페인</button>
         <button class="nav-link custom-button" id="nav-nl-tab" data-bs-toggle="tab" data-bs-target="#nav-nl" type="button" role="tab" aria-controls="nav-nl" aria-selected="false">네덜란드</button>
         <button class="nav-link custom-button" id="nav-gm-tab" data-bs-toggle="tab" data-bs-target="#nav-gm" type="button" role="tab" aria-controls="nav-gm" aria-selected="false">독일</button>
         <button class="nav-link custom-button" id="nav-cz-tab" data-bs-toggle="tab" data-bs-target="#nav-cz" type="button" role="tab" aria-controls="nav-cz" aria-selected="false">체코</button>
+        
+        <button class="nav-link linkPlus">+</button>
       </div>
   </nav>
   </div>
