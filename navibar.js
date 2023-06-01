@@ -125,7 +125,7 @@ $(document).on('click', '.editGoal', function() {
     const editGoalElement = $(this).parent().parent().prev().children();
     editGoalElement.replaceWith(function() {
         let changeGoalElement = $(this).text();
-        return $("<input class='aGoal' style='width: 80%'>", {
+        return $("<input class='aGoal' style='width: 10em'>", {
         type: 'text',
         value: changeGoalElement
         }).on('keypress', function(e) {
