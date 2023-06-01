@@ -137,5 +137,14 @@ $(document).on('click', '.editGoal', function() {
             });
         }
         });
+        // mainNav.addEventListener('click', (event) => {
+        //     if (event.target === mainNav) { // 외부 클릭 시 창닫음
+        //         let newGoalElement = $(this).val();
+        //         $(this).replaceWith(function() {
+        //         return $("<a class='aGoal' href='#'>" + newGoalElement + "</a>");
+        //         });
+        //     }
+        // });
     });
+    
 });
