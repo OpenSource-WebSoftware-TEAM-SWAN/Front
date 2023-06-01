@@ -114,10 +114,10 @@ $(document).ready(function () {
 });
 
 $(document).on('click','.imgGoal',function(){
-    $(this).next().next().next().toggle();
+    $(this).next().next().next().slideToggle(90);
 });
 $(document).on('click','.imgSub',function(){
-    $(this).next().next().next().toggle();
+    $(this).next().next().next().slideToggle(90);
 });
 
 $(document).on('click', '.editGoal', function() {
@@ -125,7 +125,7 @@ $(document).on('click', '.editGoal', function() {
     const editGoalElement = $(this).parent().parent().prev().children();
     editGoalElement.replaceWith(function() {
         let changeGoalElement = $(this).text();
-        return $("<input class='aGoal' style='width: 70%'>", {
+        return $("<input class='aGoal' style='width: 80%'>", {
         type: 'text',
         value: changeGoalElement
         }).on('keypress', function(e) {
