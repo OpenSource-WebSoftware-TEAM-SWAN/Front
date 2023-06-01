@@ -142,5 +142,6 @@ $(document).on('click', '.editGoal', function() {
             });
         });
     });
-    
+    $('.aGoal').focus();
+    $('.aGoal').select();
 });
