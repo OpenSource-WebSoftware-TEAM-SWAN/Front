@@ -7,7 +7,7 @@ $(document).ready(function(){
     });
     $grid2.masonry('reloadItems');
     $grid2.masonry('layout');
-})
+});
 
 // 이미지 추가
 $('.writeSeed_body_imgPlus').click(function(e){
@@ -15,11 +15,16 @@ $('.writeSeed_body_imgPlus').click(function(e){
     $('#uploadImg').click();
 });
 function changeValue(obj){
-    let tmp=$('.writeSeed_body_imgPlus');   
-    let str='<img src="'+obj.value+'" alt="">';
-    $('.writeSeed_body_img').remove($('.writeSeed_body_imgPlus'));
-    $('.writeSeed_body_img').append(str);
-    $('.writeSeed_body_img').append(tmp);
+    var fReader=new FileReader();
+    fReader.readAsDataURL(obj.files[0]);
+    fReader.onloadend=function(event){
+        let tmp=$('.writeSeed_body_imgPlus');   
+        let str='<img src="'+event.target.result+'" alt="">';
+        $('.writeSeed_body_img').remove($('.writeSeed_body_imgPlus'));
+        $('.writeSeed_body_img').append(str);
+        $('.writeSeed_body_img').append(tmp);
+    }
+    
 }
 
 // 게시하기
@@ -52,6 +57,25 @@ $('.writeSeed_body_btn').click(function(e){
         $grid2.masonry('layout');
         $('#seedGoal').val('');
         $('#seedMemo').val('');
-        $('.writeSeed').click();
+
+        // 피드 보기
+        $('.card').click(function(){
+            $('.seedViewBg').css('display','block');
+            $('.seedView').css('display','block');
+            $('.seedViewClose').css('display','block');
+            $('.seedViewClose').click(function(){
+                $('.seedViewBg').css('display','none');
+                $('.seedView').css('display','none');
+            });
+            $('.seedViewBg').click(function(){
+                $('.seedViewBg').css('display','none');
+                $('.seedView').css('display','none');
+            });
+            var tmpPos=$(this).children('div').children('div');
+            $('seedViewTime').text($(tmpPos).children('p').first().text());
+            $('seedViewGoal').children('h2').text($(tmpPos).children('h3').text());
+            $('seedViewMemo').chdilren('p').text($(tmpPos).children('p').last().text());
+        });
+        $('.writeSeedClose').click();
     }
 });
