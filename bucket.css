@@ -64,6 +64,14 @@ body {
   /* display: none; */
 }
 
+.nav-tabs input{
+  outline: 0;
+}
+
+.nav-tabs input:focus{
+  outline: 0;
+}
+
 *::-webkit-scrollbar,
 *::-webkit-scrollbar-thumb {
   width: 10px;

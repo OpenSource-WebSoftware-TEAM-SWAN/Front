@@ -75,12 +75,34 @@
     
 }
 
+.writeSeed_body_img img{
+    object-fit: cover;
+    margin-bottom: 1%;
+    min-height: 200px;
+    max-height: 200px;
+}
+
 .writeSeed_body_imgPlus > img{
     padding: 30%;
     width: 100%;
-    min-height: 50px;
 }
 
 .writeSeed_body_imgPlus:hover{
     background-color: rgba(0,0,0,0.2);
+}
+
+.writeSeed_submit{
+    width: 100%;
+    color: white;
+    background-color: #F7591D;
+    overflow: hidden;
+    text-align: center;
+    border: 0;
+    border-radius: 6px;
+    font-size: x-large;
+    padding: 4px;
+}
+
+.writeSeed_submit:hover{
+    background-color: #ff8344;
 }
