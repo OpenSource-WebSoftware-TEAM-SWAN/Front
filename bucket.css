@@ -69,6 +69,14 @@ body {
   /* display: none; */
 }
 
+.nav-tabs input{
+  outline: 0;
+}
+
+.nav-tabs input:focus{
+  outline: 0;
+}
+
 *::-webkit-scrollbar,
 *::-webkit-scrollbar-thumb {
   width: 10px;
@@ -94,6 +102,18 @@ body {
 
 .custom-button[aria-selected="true"] {
   color:#F7591D !important;
+}
+
+.linkPlus{
+  color: #747373;
+  border: none !important;
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+.linkPlus:hover{
+  color: #747373;
+  background-color: rgba(0,0,0,0.1);
 }
 
 @font-face {
