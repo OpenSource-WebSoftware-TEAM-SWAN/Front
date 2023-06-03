@@ -4,8 +4,7 @@
             transition-property: opacity;
             background-image: url(images/night6.jpg);
             background-size: cover;
-            background-repeat: no-repeat;
-            
+            background-repeat: no-repeat;   
         }
     
         body.fade {
