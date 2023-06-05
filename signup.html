@@ -11,28 +11,25 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js" defer></script>
 
-    <title>Login</title>
+    <title>Sign up</title>
 </head>
 
 <body>
     <div class="loginlogin">
-        <p style="font-size: 64px;">Login</p>
+        <p style="font-size: 64px;">Sign up</p>
     </div>
     <div class="container-login" style="display: none;">
-        
         <div class="login-wrapper">
             <div class="goqhfrp">
-            <h3 style="color:#f26322" class="upupupup">SWAN</h3>
-            <p style="color:#f8f8f8">With your a little step</p>
-            </div>
+                <h3 style="color:#f26322" class="upupupup">SWAN</h3>
+                <p style="color:#f8f8f8">With your a little step</p>
+                </div>
             <form id="login-form">
-                <input type="text" name="userID" placeholder="Email" id="LOGIN_ID" autofocus>
-                <input type="password" name="userPW" placeholder="Password" id="LOGIN_PW">
-                <label for="remember-check">
-                    <input type="checkbox" id="remember-check"> Remember ID
-                </label>
-                <p class="register" id="registerBtn"><a href="signup.html" data-toggle="modal" data-target="#registerModal">Sign up</a></p>
-                <input type="submit" value="Login" id="LOGIN_BTN" disabled>
+                <input type="text" name="signUpID" placeholder="Email" id="LOGIN_ID" autofocus>
+                <input type="password" name="signUpPW" placeholder="Password" id="LOGIN_PW">
+                <input type="password" name="confirmPW" placeholder="Confirm Password" id="LOGIN_CONFIRM">
+                <input type="text" name="signUpName" placeholder="Name" id="LOGIN_NAME">
+                <input type="submit" value="Sign up" id="LOGIN_BTN" disabled>
             </form>
         </div>
     </div>
@@ -80,6 +77,7 @@
         var backgroundImage = new Image();
         backgroundImage.onload = imageLoaded;
         backgroundImage.src = 'images/night6.jpg'; // 실제로 사용하는 배경 이미지의 경로로 변경해야 합니다.
+
     </script>
 </body>
 
