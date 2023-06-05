@@ -7,6 +7,7 @@ $(document).ready(function(){
     });
     $grid2.masonry('reloadItems');
     $grid2.masonry('layout');
+
 });
 
 // 이미지 추가

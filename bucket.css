@@ -122,6 +122,10 @@ body {
   background-color: rgba(0,0,0,0.1);
 }
 
+.linkPlus:focus{
+  color: #747373;
+}
+
 @font-face {
   font-family: 'melona';
   src: url('./fonts/BinggraeMelona-Bold.ttf') format('truetype');
