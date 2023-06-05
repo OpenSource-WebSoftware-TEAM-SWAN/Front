@@ -25,7 +25,7 @@ function changeValue(obj){
         $('.writeSeed_body_img').append(str);
         $('.writeSeed_body_img').append(tmp);
     }
-    
+    changeValue(0);
 }
 
 // 게시하기
@@ -58,6 +58,7 @@ $('.writeSeed_body_btn').click(function(e){
         $grid2.masonry('layout');
         $('#seedGoal').val('');
         $('#seedMemo').val('');
+        $('.writeSeed_body_img').children('img').remove();
 
         // 피드 보기
         $('.card').click(function(){
@@ -77,8 +78,8 @@ $('.writeSeed_body_btn').click(function(e){
             $('seedViewGoal').children('h2').text($(tmpPos).children('h3').text());
             $('seedViewMemo').chdilren('p').text($(tmpPos).children('p').last().text());
         });
-        $('.writeSeedClose').click();
     }
+    $('.writeSeedClose').click();
 });
 
 /*피드 추가버튼*********************************************************************/

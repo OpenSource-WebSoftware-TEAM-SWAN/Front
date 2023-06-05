@@ -36,52 +36,20 @@ $(document).ready(function () {
         let str;
         if(titleCnt>0){
         str="<ul class='elementGoal'>"+
-                "<img class='imgGoal' src='./images/button_hirDown.png'>"+
                 "<li><a class='aGoal'>새 목표("+titleCnt+")</a></li>"+
                 "<li class='exception'><div style='float:right;'>"+
                     "<button class='editGoal'>수정</button>"+"&nbsp;"+
                     "<button>삭제</button>"+
                 "</div></li>"+
-                "<ul class='elementSub' style='clear:both;'>"+
-                    "<img class='imgSub' src='./images/button_hirDown.png'>"+
-                    "<li><a class='aSub'>새 소제목</a></li>"+
-                    "<li class='exception'><div style='float:right;'>"+
-                        "<button class='editGoal'>수정</button>"+"&nbsp;"+
-                        "<button>삭제</button>"+
-                    "</div></li>"+
-                    "<ul class='elementFeed' style='clear:both;'>"+
-                        "<li><a href='#'>새 피드</a></li>"+
-                        "<li class='exception'><div style='float:right;'>"+
-                            "<button class='editGoal'>수정</button>"+"&nbsp;"+
-                            "<button>삭제</button>"+
-                        "</div></li>"+
-                    "</ul>"+
-                "</ul>"+
             "</ul>"
         }
         else{
         str="<ul class='elementGoal'>"+
-                "<img class='imgGoal' src='./images/button_hirDown.png'>"+
                 "<li><a class='aGoal'>새 목표</a></li>"+
                 "<li class='exception'><div style='float:right;'>"+
                     "<button class='editGoal'>수정</button>"+"&nbsp;"+
                     "<button>삭제</button>"+
                 "</div></li>"+
-                "<ul class='elementSub' style='clear:both;'>"+
-                    "<img class='imgSub' src='./images/button_hirDown.png'>"+
-                    "<li><a class='aSub'>새 소제목</a></li>"+
-                    "<li class='exception'><div style='float:right;'>"+
-                        "<button class='editGoal'>수정</button>"+"&nbsp;"+
-                        "<button>삭제</button>"+
-                    "</div></li>"+
-                    "<ul class='elementFeed' style='clear:both;'>"+
-                        "<li><a href='#'>새 피드</a></li>"+
-                        "<li class='exception'><div style='float:right;'>"+
-                            "<button class='editGoal'>수정</button>"+"&nbsp;"+
-                            "<button>삭제</button>"+
-                        "</div></li>"+
-                    "</ul>"+
-                "</ul>"+
             "</ul>"
         }
         $('.headline-info').prepend(str);
@@ -113,12 +81,6 @@ $(document).ready(function () {
     });
 });
 
-$(document).on('click','.imgGoal',function(){
-    $(this).next().next().next().slideToggle(90);
-});
-$(document).on('click','.imgSub',function(){
-    $(this).next().next().next().slideToggle(90);
-});
 
 $(document).on('click', '.editGoal', function() {
     // $(this).css('display','none'); 수정 시 버튼들 사라지기
