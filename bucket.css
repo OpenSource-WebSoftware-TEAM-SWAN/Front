@@ -44,6 +44,11 @@ body {
   padding-right: 15%;
 }
 
+.head-title {
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
 #tabs {
   grid-row: 2/3;
   text-align: center;
