@@ -33,27 +33,27 @@ $(document).ready(function () {
 
     // 목표 추가
     $('.add-title').click(function(){
-        let str;
-        if(titleCnt>0){
-        str="<ul class='elementGoal'>"+
-                "<li><a class='aGoal'>새 목표("+titleCnt+")</a></li>"+
-                "<li class='exception'><div style='float:right;'>"+
-                    "<button class='editGoal'>수정</button>"+"&nbsp;"+
-                    "<button>삭제</button>"+
-                "</div></li>"+
-            "</ul>"
-        }
-        else{
-        str="<ul class='elementGoal'>"+
-                "<li><a class='aGoal'>새 목표</a></li>"+
-                "<li class='exception'><div style='float:right;'>"+
-                    "<button class='editGoal'>수정</button>"+"&nbsp;"+
-                    "<button>삭제</button>"+
-                "</div></li>"+
-            "</ul>"
-        }
+        let str=
+        "<ul class='elementGoal'>"+
+            "<li><a class='aGoal'>새 목표</a></li>"+
+            "<li class='exception'><div style='float:right;'>"+
+                "<button class='editGoal'>수정</button>"+"&nbsp;"+
+                "<button class='delGoal'>삭제</button>"+
+            "</div></li>"+
+        "</ul>"
         $('.headline-info').prepend(str);
         titleCnt++;
+
+        // 마우스 호버 시 버튼 뜨게
+        $('.elementGoal').hover(function(){
+            $(this).children('.exception').children('div').children('.editGoal').css('display','inline-block');
+            $(this).children('.exception').children('div').children('.delGoal').css('display','inline-block');
+        }, function(){
+            $(this).children('.exception').children('div').children('.editGoal').css('display','none');
+            $(this).children('.exception').children('div').children('.delGoal').css('display','none');
+        });
+
+        
     });
 
     //버킷리스트 누를 시
@@ -81,7 +81,7 @@ $(document).ready(function () {
     });
 });
 
-
+//수정하기
 $(document).on('click', '.editGoal', function() {
     // $(this).css('display','none'); 수정 시 버튼들 사라지기
     const editGoalElement = $(this).parent().parent().prev().children();
@@ -106,4 +106,10 @@ $(document).on('click', '.editGoal', function() {
     });
     $('.aGoal').focus();
     $('.aGoal').select();
+});
+
+//삭제하기
+$(document).on('click', '.delGoal', function() {
+    // $(this).css('display','none'); 수정 시 버튼들 사라지기
+    $(this).parent().parent().parent().remove();
 });
