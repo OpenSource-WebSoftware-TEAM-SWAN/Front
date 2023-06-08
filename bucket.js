@@ -71,6 +71,6 @@ $('.linkPlus').click(function(){
       });
     });
   });
-  $('.custom-button').last().next().focus();
-  $('.custom-button').last().next().select();
+  $('.linkPlus').prev().focus();
+  $('.linkPlus').prev().select();
 });
