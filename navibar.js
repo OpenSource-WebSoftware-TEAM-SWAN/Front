@@ -83,13 +83,14 @@ $(document).ready(function () {
 
 //수정하기
 $(document).on('click', '.editGoal', function() {
-    // $(this).css('display','none'); 수정 시 버튼들 사라지기
     const editGoalElement = $(this).parent().parent().prev().children();
     editGoalElement.replaceWith(function() {
         let changeGoalElement = $(this).text();
-        return $("<input class='aGoal' "+"value='"+changeGoalElement+"'"+" style='width: 10em '>", {
+        return $("<input class='aGoal' "+"value='"+changeGoalElement+"'"+" style='width: 100%; outline:#f26322 1px solid; border:0;'>", {
         }).on('keypress', function(e) {
         if (e.keyCode === 13) {
+            $(this).css('display','inline-block');
+            $(this).next().css('display','inline-block');
             let newGoalElement = $(this).val();
             $(this).replaceWith(function() {
             return $("<a class='aGoal' href='#' style='width: 10em'>" + newGoalElement + "</a>");
@@ -97,6 +98,8 @@ $(document).on('click', '.editGoal', function() {
             });
         }
         }).on('blur', function(){
+            $(this).css('display','inline-block');
+            $(this).next().css('display','inline-block');
             let newGoalElement = $(this).val();
             $(this).replaceWith(function() {
             return $("<a class='aGoal' href='#' style='width: 10em'>" + newGoalElement + "</a>");
@@ -112,4 +115,12 @@ $(document).on('click', '.editGoal', function() {
 $(document).on('click', '.delGoal', function() {
     // $(this).css('display','none'); 수정 시 버튼들 사라지기
     $(this).parent().parent().parent().remove();
+});
+
+$('.elementGoal').hover(function(){
+    $(this).children('.exception').children('div').children('.editGoal').css('display','inline-block');
+    $(this).children('.exception').children('div').children('.delGoal').css('display','inline-block');
+}, function(){
+    $(this).children('.exception').children('div').children('.editGoal').css('display','none');
+    $(this).children('.exception').children('div').children('.delGoal').css('display','none');
 });
