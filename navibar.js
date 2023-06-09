@@ -33,12 +33,14 @@ $(document).ready(function () {
 
     // 목표 추가
     $('.add-title').click(function(){
+        let str1 = "fa-solid fa-pencil";
+        let str2 = "fa-solid fa-trash";
         let str=
         "<ul class='elementGoal'>"+
-            "<li><a class='aGoal'>새 목표</a></li>"+
+            "<li><a class='aGoal'>New goal</a></li>"+
             "<li class='exception'><div style='float:right;'>"+
-                "<button class='editGoal'>수정</button>"+"&nbsp;"+
-                "<button class='delGoal'>삭제</button>"+
+                "<button class='editGoal'>Edit</button>"+"&nbsp;"+
+                "<button class='delGoal'>Delete</button></button>"+
             "</div></li>"+
         "</ul>"
         $('.headline-info').prepend(str);

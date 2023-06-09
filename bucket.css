@@ -117,6 +117,17 @@ body {
   background-color: transparent;
 }
 
+.editSub, .delSub{
+  font-family: 'Font Awesome 5 Free'; /* Font Awesome 폰트 패밀리 */
+  font-weight: 900; /* Font Awesome 아이콘 두께 */
+  content: '\f0da'; /* Font Awesome 아이콘 코드 */
+  display: none;
+  position: absolute;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+}
+
 .linkPlus:hover{
   color: #747373;
   background-color: rgba(0,0,0,0.1);

@@ -75,8 +75,8 @@
                 <img src="./images/profile.jpg" alt="user image" style="width: 100%;">
             </div>
             <div class="user-infoStat">
-                <p id="userName">빈원</p>
-                <p id="userIntro">오늘도 힘차고 굳센 하루!</p>
+                <p id="userName">Binwon</p>
+                <p id="userIntro">Mid gap gg</p>
             </div>
         </div>
         <!-- END user brief unfo -->
@@ -90,7 +90,7 @@
         </div>
         <div class="divRecentSeed">
             <div class="divRecentSeedIn">
-                <button class="btnRecentSeed"><img class="imgToggle" src="images/button_down.png" alt="down">&nbsp;최근&nbsp;항목</button>
+                <button class="btnRecentSeed"><img class="imgToggle" src="images/button_down.png" alt="down">&nbsp;최근&nbsp;element</button>
             </div>
         </div>
         <div class="divRecentSeedOpen">
@@ -120,15 +120,17 @@
   <div id="tabs">
   <nav>
       <div class="nav nav-tabs" id="nav-tab" role="tablist" >
-        <button class="nav-link active custom-button" id="nav-fr-tab" data-bs-toggle="tab" data-bs-target="#nav-fr" type="button" role="tab" aria-controls="nav-fr" aria-selected="true">프랑스</button>
-        <button class="nav-link custom-button" id="nav-uk-tab" data-bs-toggle="tab" data-bs-target="#nav-uk" type="button" role="tab" aria-controls="nav-uk" aria-selected="false">영국</button>
-        <button class="nav-link custom-button" id="nav-sp-tab" data-bs-toggle="tab" data-bs-target="#nav-sp" type="button" role="tab" aria-controls="nav-sp" aria-selected="false">스페인</button>
-        <button class="nav-link custom-button" id="nav-nl-tab" data-bs-toggle="tab" data-bs-target="#nav-nl" type="button" role="tab" aria-controls="nav-nl" aria-selected="false">네덜란드</button>
-        <button class="nav-link custom-button" id="nav-gm-tab" data-bs-toggle="tab" data-bs-target="#nav-gm" type="button" role="tab" aria-controls="nav-gm" aria-selected="false">독일</button>
-        <button class="nav-link custom-button" id="nav-cz-tab" data-bs-toggle="tab" data-bs-target="#nav-cz" type="button" role="tab" aria-controls="nav-cz" aria-selected="false">체코</button>
+        <button class="nav-link active custom-button" id="nav-fr-tab" data-bs-toggle="tab" data-bs-target="#nav-fr" type="button" role="tab" aria-controls="nav-fr" aria-selected="true" onclick="onTab();">프랑스</button>
+        <button class="nav-link custom-button" id="nav-uk-tab" data-bs-toggle="tab" data-bs-target="#nav-uk" type="button" role="tab" aria-controls="nav-uk" aria-selected="false" onclick="onTab();">영국</button>
+        <button class="nav-link custom-button" id="nav-sp-tab" data-bs-toggle="tab" data-bs-target="#nav-sp" type="button" role="tab" aria-controls="nav-sp" aria-selected="false" onclick="onTab();">스페인</button>
+        <button class="nav-link custom-button" id="nav-nl-tab" data-bs-toggle="tab" data-bs-target="#nav-nl" type="button" role="tab" aria-controls="nav-nl" aria-selected="false" onclick="onTab();">네덜란드</button>
+        <button class="nav-link custom-button" id="nav-gm-tab" data-bs-toggle="tab" data-bs-target="#nav-gm" type="button" role="tab" aria-controls="nav-gm" aria-selected="false" onclick="onTab();">독일</button>
+        <button class="nav-link custom-button" id="nav-cz-tab" data-bs-toggle="tab" data-bs-target="#nav-cz" type="button" role="tab" aria-controls="nav-cz" aria-selected="false" onclick="onTab();">체코</button>
         
         <button class="nav-link linkPlus">+</button>
       </div>
+      <button class="editSub"><i class="fa-solid fa-pencil"></i></button>
+      <button class="delSub"><i class="fa-solid fa-trash"></i></button>
   </nav>
   </div>
   <div id="nav-tabContent" class="tab-content"><!--실제로 출력되는 부분-->
