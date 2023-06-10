@@ -1,5 +1,4 @@
 var nav_cnt=0;
-let tmpNav='nav-'+nav_cnt;
 $(document).ready(function () {
   // Masonry 초기화
   var $grid = $(".row").masonry({
@@ -31,6 +30,12 @@ function onTab(){
   let pos=$(".nav-link:focus").offset();
   pos=({left:pos.left,top:pos.top-tmpHeight});
   let currentTab=$(".nav-link:focus");
+
+  // 이전에 연결된 클릭 이벤트 핸들러 제거
+  $('.editSub').off('click');
+  $('.delSub').off('click');
+
+  //탭 수정 버튼
   $('.editSub').offset(pos).click(function(){
     let currentVal=$(currentTab).text();
     $('.editSub').css('display','none'); 
@@ -43,7 +48,6 @@ function onTab(){
     currentTab.next().focus();
     currentTab.next().select();
     
-    //탭 수정 버튼
     currentTab.next().on('keypress',function(e){
       if(e.keyCode===13){
         currentTab.html(currentTab.next().val());
@@ -57,27 +61,39 @@ function onTab(){
       });
     });
 
-    //탭 삭제 버튼
-    let tmpWidth = $('.editSub').outerWidth();
-    pos=({left:pos.left+tmpWidth,top:pos.top})
-    $('.delSub').offset(pos).click(function(){
-      currentTab.remove();
-      $('.editSub').css('display','none'); 
-      $('.delSub').css('display','none');
-    });
+  //탭 삭제 버튼  
+  let tmpWidth = $('.editSub').outerWidth();
+  pos=({left:pos.left+tmpWidth,top:pos.top})
+  $('.delSub').offset(pos).click(function(){
+    let tmpId = currentTab.attr('id').replace('-tab','');
+    $('#'+tmpId).remove();
+    currentTab.remove();
+    $('.editSub').css('display','none'); 
+    $('.delSub').css('display','none');
+  });
+  getCheckPercentage();
+}
 
-    // blur
-    currentTab.blur(function(){
-      $('.editSub').css('display','none'); 
-      $('.delSub').css('display','none');
-    });
+// 퍼센티지 구하기
+function getCheckPercentage(){
+  var check_cnt=0;
+  var box_cnt=0;
+
+  $('.checkSub').each(function(){
+    if ($(this).is(":checked")) {
+      check_cnt++;
+    }
+    box_cnt++;
+  });
+  alert(check_cnt*100/box_cnt);
 }
 
 // 탭 추가 버튼
 $('.linkPlus').click(function(){
+  let tmpNav='nav-'+nav_cnt;
   let str;
   str=
-  '<button class="nav-link custom-button" '+
+  '<button id="'+tmpNav+'-tab" class="nav-link custom-button" '+
   'data-bs-toggle="tab" data-bs-target="#'+tmpNav+'" type="button" '+
   'role="tab" aria-controls="'+tmpNav+'" aria-selected="false">New Subgoal</button>';
   let tmp=$(this);
@@ -95,13 +111,13 @@ $('.linkPlus').click(function(){
           let tmpMasonry='{"percentPosition": true}';
           let tmpStr=
           '<div class="tab-pane fade " id="'+tmpNav+'" role="tabpanel" aria-labelledby="'+tmpNav+'-tab">'+
-          '<div class="container-fluid">'+
+          '<div class="container-fluid">'+'<form action=""><input class="checkSub" type="checkbox"></form>'+
           '<div class="row" data-masonry='+tmpMasonry+'>'+
           '</div></div></div>'
           let tmpdiv = $('#nav-tabContent').append(tmpStr);
           tmpdiv.focus();
           nav_cnt++;
-        return $('<button class="nav-link custom-button" data-bs-toggle="tab" data-bs-target="#'+tmpNav+'" type="button" '+
+        return $('<button id="'+tmpNav+'-tab" class="nav-link custom-button" data-bs-toggle="tab" data-bs-target="#'+tmpNav+'" type="button" '+
           'role="tab" aria-controls="'+tmpNav+'" aria-selected="false" onclick="onTab();">'+newGoalElement+'</button>');
         });
     }
@@ -112,13 +128,13 @@ $('.linkPlus').click(function(){
         let tmpMasonry='{"percentPosition": true}';
         let tmpStr=
         '<div class="tab-pane fade " id="'+tmpNav+'" role="tabpanel" aria-labelledby="'+tmpNav+'-tab">'+
-        '<div class="container-fluid">'+
+        '<div class="container-fluid">'+'<form action=""><input class="checkSub" type="checkbox"></form>'+
         '<div class="row" data-masonry='+tmpMasonry+'>'+
         '</div></div></div>'
         let tmpdiv = $('#nav-tabContent').append(tmpStr);
         tmpdiv.focus();
         nav_cnt++;
-      return $('<button class="nav-link custom-button" data-bs-toggle="tab" data-bs-target="#'+tmpNav+'" type="button" '+
+      return $('<button id="'+tmpNav+'-tab" class="nav-link custom-button" data-bs-toggle="tab" data-bs-target="#'+tmpNav+'" type="button" '+
         'role="tab" aria-controls="'+tmpNav+'" aria-selected="false" onclick="onTab();">'+newGoalElement+'</button>');
       });
     });

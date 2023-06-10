@@ -12,6 +12,7 @@
   <script defer src="writeSeed.js"></script>
   <link href="bucket.css" rel="stylesheet">
   <link href="seedShow.css" rel="stylesheet">
+  <link href="showSeed.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -52,11 +53,17 @@
   </div>
 
   <!--피드 뷰 모달---------------------------------------------------------------->
-  <div class="seedViewBg">
-    <div class="seedView">
-      <iframe class="seedViewIframe" src="seedShow.html" frameborder="0" scrolling="no"></iframe>
-      <i class="fas fa-thin fa-xmark seedViewClose"></i>
+  <div class="seedViewBg"></div>
+  <div class="seedView">
+    <div class="seedView_imgs">
+      <img src="images/night4.jpg" alt="">
     </div>
+    <div class="seedView_text">
+      <p class="seedView_goal">골</p>
+      <p class="seedView_memo">메모</p>
+      <p class="seedView_time">시간</p>
+    </div>
+
   </div>
 
     <!--네비바 버튼-------------------------------------------------------->
@@ -115,7 +122,7 @@
     </div>
     <!---------------------------------------------------------->
   <div id="pageHeader">
-    <h1 style="font-size: 2rem;">빈원이의 유럽일주</h1>
+    <h1 style="font-size: 2rem;">유럽일주</h1>
   </div>
   <div id="tabs">
   <nav>
@@ -136,6 +143,7 @@
   <div id="nav-tabContent" class="tab-content"><!--실제로 출력되는 부분-->
     <div class="tab-pane fade show active" id="nav-fr" role="tabpanel" aria-labelledby="nav-fr-tab">
     <div class="container-fluid">
+      <form action=""><input class="checkSub" type="checkbox"></form>
       <div class="row" data-masonry='{"percentPosition": true}'><!--row class에 Masonry 추가-->
             <!-- <a href="#" class="btn-card">수정</a>
             <a href="#" class="btn-card">삭제</a>
@@ -146,13 +154,15 @@
 
   <div class="tab-pane fade" id="nav-uk" role="tabpanel" aria-labelledby="nav-uk-tab">
       <div class="container-fluid">
+        <form action=""><input class="checkSub" type="checkbox"></form>
         <div class="row" data-masonry='{"percentPosition": true}'><!--row class에 Masonry 추가-->
-          
+
       </div><!--row closing tag-->
     </div><!--container-fluid closing tag-->
   </div><!--nav-uk closing tag-->
   <div class="tab-pane fade " id="nav-sp" role="tabpanel" aria-labelledby="nav-sp-tab">
     <div class="container-fluid">
+      <form action=""><input class="checkSub" type="checkbox"></form>
       <div class="row" data-masonry='{"percentPosition": true}'><!--row class에 Masonry 추가-->
         
     </div><!--row closing tag-->
@@ -160,6 +170,7 @@
   </div>
   <div class="tab-pane fade " id="nav-nl" role="tabpanel" aria-labelledby="nav-nl-tab">
     <div class="container-fluid">
+      <form action=""><input class="checkSub" type="checkbox"></form>
       <div class="row" data-masonry='{"percentPosition": true}'><!--row class에 Masonry 추가-->
         
     </div><!--row closing tag-->
@@ -167,6 +178,7 @@
   </div>
   <div class="tab-pane fade " id="nav-gm" role="tabpanel" aria-labelledby="nav-gm-tab">
     <div class="container-fluid">
+      <form action=""><input class="checkSub" type="checkbox"></form>
       <div class="row" data-masonry='{"percentPosition": true}'><!--row class에 Masonry 추가-->
         
     </div><!--row closing tag-->
@@ -175,6 +187,7 @@
 
   <div class="tab-pane fade " id="nav-cz" role="tabpanel" aria-labelledby="nav-cz-tab">
     <div class="container-fluid">
+      <form action=""><input class="checkSub" type="checkbox"></form>
       <div class="row" data-masonry='{"percentPosition": true}'><!--row class에 Masonry 추가-->
         
       </div><!--row closing tag-->
@@ -192,5 +205,6 @@
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
 <script defer src="bucket.js"></script>
+<script defer src="showSeed.js"></script>
 </body>
 </html>

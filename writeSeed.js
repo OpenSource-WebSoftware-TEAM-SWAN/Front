@@ -42,7 +42,7 @@ $('.writeSeed_body_btn').click(function(e){
         let time=''+h+m+date+month+year;
         let str=
         '<div class="col-6 col-md-4 col-lg-3">'+
-        '<div class="card">'+
+        '<div class="card" onclick="showSeed();">'+
         '<img src="./images/sameple_image.jpeg" class="card-img-top">'+ // 내부 이미지의 첫 번째
         '<div class="card-body">'+
         '<div class="card-text">'+
@@ -59,27 +59,16 @@ $('.writeSeed_body_btn').click(function(e){
         $('#seedGoal').val('');
         $('#seedMemo').val('');
         $('.writeSeed_body_img').children('img').remove();
-
-        // 피드 보기
-        $('.card').click(function(){
-            $('.seedViewBg').css('display','block');
-            $('.seedView').css('display','block');
-            $('.seedViewClose').css('display','block');
-            $('.seedViewClose').click(function(){
-                $('.seedViewBg').css('display','none');
-                $('.seedView').css('display','none');
-            });
-            $('.seedViewBg').click(function(){
-                $('.seedViewBg').css('display','none');
-                $('.seedView').css('display','none');
-            });
-            var tmpPos=$(this).children('div').children('div');
-            $('seedViewTime').text($(tmpPos).children('p').first().text());
-            $('seedViewGoal').children('h2').text($(tmpPos).children('h3').text());
-            $('seedViewMemo').chdilren('p').text($(tmpPos).children('p').last().text());
-        });
+        $('.writeSeed').css('display','none');
     }
-    $('.writeSeedClose').click();
+
+    // 값 불러오기
+    $('.card').click(function(){
+        let pos=$(this).children('div').children('div');
+        $('.seedView_goal').text(pos.children('h3').text());
+        $('.seedView_memo').text(pos.children('p:eq(0)').text());
+        $('.seedView_time').text(pos.children('p:eq(1)').text());
+    })
 });
 
 /*피드 추가버튼*********************************************************************/
