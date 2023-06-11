@@ -1,5 +1,10 @@
 var nav_cnt=0;
 $(document).ready(function () {
+  // 홈버튼
+  $('.btnHome').click(function(){
+    location.href = 'firstPage.html';
+  });
+
   // Masonry 초기화
   var $grid = $(".row").masonry({
     percentPosition: true,
